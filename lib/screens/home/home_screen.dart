@@ -14,43 +14,199 @@ import '../notifications/notifications_screen.dart';
 class HomeScreen extends StatefulWidget {
   final VoidCallback onThemeToggle;
   const HomeScreen({required this.onThemeToggle, super.key});
-  @override State<HomeScreen> createState() => _HomeScreenState();
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   int tab = 0;
+
   @override
   Widget build(BuildContext context) {
-    final pages = [_Dashboard(onThemeToggle: widget.onThemeToggle, onTab: (i) => setState(() => tab = i)), const CropsScreen(), const DiseaseScreen(), const MarketScreen(), ProfileScreen(onThemeToggle: widget.onThemeToggle)];
-    return Scaffold(body: IndexedStack(index: tab, children: pages), bottomNavigationBar: NavigationBar(selectedIndex: tab, onDestinationSelected: (v) => setState(() => tab = v), destinations: const [
-      NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home), label: 'Home'), NavigationDestination(icon: Icon(Icons.grass_outlined), selectedIcon: Icon(Icons.grass), label: 'Crops'), NavigationDestination(icon: Icon(Icons.document_scanner_outlined), selectedIcon: Icon(Icons.document_scanner), label: 'Scan'), NavigationDestination(icon: Icon(Icons.storefront_outlined), selectedIcon: Icon(Icons.storefront), label: 'Market'), NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: Icon(Icons.person), label: 'Profile'),
-    ]));
+    final pages = <Widget>[
+      _Dashboard(
+        onThemeToggle: widget.onThemeToggle,
+        onTab: (i) => setState(() => tab = i),
+      ),
+      const CropsScreen(),
+      const DiseaseScreen(),
+      const MarketScreen(),
+      ProfileScreen(onThemeToggle: widget.onThemeToggle),
+    ];
+
+    return Scaffold(
+      body: IndexedStack(index: tab, children: pages),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: tab,
+        onDestinationSelected: (value) => setState(() => tab = value),
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.grass_outlined), selectedIcon: Icon(Icons.grass), label: 'Crops'),
+          NavigationDestination(icon: Icon(Icons.document_scanner_outlined), selectedIcon: Icon(Icons.document_scanner), label: 'Scan'),
+          NavigationDestination(icon: Icon(Icons.storefront_outlined), selectedIcon: Icon(Icons.storefront), label: 'Market'),
+          NavigationDestination(icon: Icon(Icons.person_outline), selectedIcon: Icon(Icons.person), label: 'Profile'),
+        ],
+      ),
+    );
   }
 }
 
 class _Dashboard extends StatelessWidget {
   final VoidCallback onThemeToggle;
   final ValueChanged<int> onTab;
+
   const _Dashboard({required this.onThemeToggle, required this.onTab});
 
   @override
-  Widget build(BuildContext context) => SafeArea(child: RefreshIndicator(
-    onRefresh: () => Future.delayed(const Duration(milliseconds: 700)),
-    child: ListView(padding: const EdgeInsets.fromLTRB(20, 18, 20, 30), children: [
-      Row(children: [const CircleAvatar(radius: 25, child: Icon(Icons.person)), const SizedBox(width: 12), Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text('Good morning, Jatin', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)), Text('Ready for a productive farm day?', style: Theme.of(context).textTheme.bodySmall)])), IconButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const NotificationsScreen())), icon: const Badge(label: Text('3'), child: Icon(Icons.notifications_none_rounded)))]),
-      const SizedBox(height: 22),
-      Container(padding: const EdgeInsets.all(20), decoration: BoxDecoration(gradient: const LinearGradient(colors: [Color(0xFF2E7D32), Color(0xFF66A968)]), borderRadius: BorderRadius.circular(26)), child: Row(children: [const Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text('Today in your farm', style: TextStyle(color: Colors.white70)), SizedBox(height: 5), Text('28°C  •  Partly cloudy', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900)), SizedBox(height: 8), Text('72% humidity  •  18% rain', style: TextStyle(color: Colors.white70))])), Container(width: 64, height: 64, decoration: BoxDecoration(color: Colors.white.withOpacity(.18), shape: BoxShape.circle), child: const Icon(Icons.wb_sunny_rounded, color: Colors.white, size: 34))]),
-      const SizedBox(height: 26), const SectionTitle('Farm overview'), const SizedBox(height: 12), Row(children: [StatCard(icon: Icons.grass, value: '12', label: 'Total crops'), const SizedBox(width: 10), StatCard(icon: Icons.eco, value: '8', label: 'Active'), const SizedBox(width: 10), StatCard(icon: Icons.agriculture, value: '2', label: 'Harvest ready')]),
-      const SizedBox(height: 26), const SectionTitle('Quick actions'), const SizedBox(height: 12), SingleChildScrollView(scrollDirection: Axis.horizontal, child: Row(children: [ActionTile(icon: Icons.add_circle_outline, label: 'Add Crop', onTap: () => onTab(1)), const SizedBox(width: 10), ActionTile(icon: Icons.document_scanner, label: 'Scan Disease', onTap: () => onTab(2)), const SizedBox(width: 10), ActionTile(icon: Icons.cloud_outlined, label: 'Weather', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const WeatherScreen()))), const SizedBox(width: 10), ActionTile(icon: Icons.location_on_outlined, label: 'Farm', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FarmScreen()))), const SizedBox(width: 10), ActionTile(icon: Icons.storefront, label: 'Market', onTap: () => onTab(3))])),
-      const SizedBox(height: 26), SectionTitle('Your crops', action: 'View all', onTap: () => onTab(1)), const SizedBox(height: 12), ...MockData.crops.take(2).map((c) => _CropMini(c)),
-      const SizedBox(height: 18), const SectionTitle('Smart insight'), const SizedBox(height: 12), Container(padding: const EdgeInsets.all(18), decoration: BoxDecoration(color: Colors.orange.withOpacity(.10), borderRadius: BorderRadius.circular(20)), child: const Row(crossAxisAlignment: CrossAxisAlignment.start, children: [Icon(Icons.lightbulb_outline, color: Colors.orange), SizedBox(width: 12), Expanded(child: Text('Rain is likely tomorrow. Consider delaying irrigation and pesticide spraying today.', style: TextStyle(fontWeight: FontWeight.w600, height: 1.4)))])),
-    ]),
-  ));
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: RefreshIndicator(
+        onRefresh: () => Future.delayed(const Duration(milliseconds: 700)),
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(20, 18, 20, 30),
+          children: [
+            Row(
+              children: [
+                const CircleAvatar(radius: 25, child: Icon(Icons.person)),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Good morning, Jatin', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
+                      Text('Ready for a productive farm day?', style: Theme.of(context).textTheme.bodySmall),
+                    ],
+                  ),
+                ),
+                IconButton(
+                  onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const NotificationsScreen())),
+                  icon: const Badge(label: Text('3'), child: Icon(Icons.notifications_none_rounded)),
+                ),
+              ],
+            ),
+            const SizedBox(height: 22),
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(colors: [Color(0xFF2E7D32), Color(0xFF66A968)]),
+                borderRadius: BorderRadius.circular(26),
+              ),
+              child: Row(
+                children: [
+                  const Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Today in your farm', style: TextStyle(color: Colors.white70)),
+                        SizedBox(height: 5),
+                        Text('28°C  •  Partly cloudy', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900)),
+                        SizedBox(height: 8),
+                        Text('72% humidity  •  18% rain', style: TextStyle(color: Colors.white70)),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 64,
+                    height: 64,
+                    decoration: BoxDecoration(color: Colors.white.withOpacity(.18), shape: BoxShape.circle),
+                    child: const Icon(Icons.wb_sunny_rounded, color: Colors.white, size: 34),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 26),
+            const SectionTitle('Farm overview'),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                StatCard(icon: Icons.grass, value: '12', label: 'Total crops'),
+                const SizedBox(width: 10),
+                StatCard(icon: Icons.eco, value: '8', label: 'Active'),
+                const SizedBox(width: 10),
+                StatCard(icon: Icons.agriculture, value: '2', label: 'Harvest ready'),
+              ],
+            ),
+            const SizedBox(height: 26),
+            const SectionTitle('Quick actions'),
+            const SizedBox(height: 12),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ActionTile(icon: Icons.add_circle_outline, label: 'Add Crop', onTap: () => onTab(1)),
+                  const SizedBox(width: 10),
+                  ActionTile(icon: Icons.document_scanner, label: 'Scan Disease', onTap: () => onTab(2)),
+                  const SizedBox(width: 10),
+                  ActionTile(icon: Icons.cloud_outlined, label: 'Weather', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const WeatherScreen()))),
+                  const SizedBox(width: 10),
+                  ActionTile(icon: Icons.location_on_outlined, label: 'Farm', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FarmScreen()))),
+                  const SizedBox(width: 10),
+                  ActionTile(icon: Icons.storefront, label: 'Market', onTap: () => onTab(3)),
+                ],
+              ),
+            ),
+            const SizedBox(height: 26),
+            SectionTitle('Your crops', action: 'View all', onTap: () => onTab(1)),
+            const SizedBox(height: 12),
+            ...MockData.crops.take(2).map((crop) => _CropMini(crop)),
+            const SizedBox(height: 18),
+            const SectionTitle('Smart insight'),
+            const SizedBox(height: 12),
+            Container(
+              padding: const EdgeInsets.all(18),
+              decoration: BoxDecoration(color: Colors.orange.withOpacity(.10), borderRadius: BorderRadius.circular(20)),
+              child: const Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(Icons.lightbulb_outline, color: Colors.orange),
+                  SizedBox(width: 12),
+                  Expanded(child: Text('Rain is likely tomorrow. Consider delaying irrigation and pesticide spraying today.', style: TextStyle(fontWeight: FontWeight.w600, height: 1.4))),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class _CropMini extends StatelessWidget {
   final Crop c;
   const _CropMini(this.c);
+
   @override
-  Widget build(BuildContext context) => Container(margin: const EdgeInsets.only(bottom: 12), padding: const EdgeInsets.all(16), decoration: BoxDecoration(color: Theme.of(context).colorScheme.surface, borderRadius: BorderRadius.circular(20), border: Border.all(color: Theme.of(context).dividerColor.withOpacity(.2))), child: Column(children: [Row(children: [CircleAvatar(backgroundColor: AppTheme.lightGreen, child: const Icon(Icons.grass, color: AppTheme.green)), const SizedBox(width: 12), Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Text(c.name, style: const TextStyle(fontWeight: FontWeight.w800)), Text('${c.health} • Harvest ${c.harvest}', style: Theme.of(context).textTheme.bodySmall)])), Text('${c.growth}%', style: const TextStyle(fontWeight: FontWeight.w800, color: AppTheme.green))]), const SizedBox(height: 12), ProgressBar(c.growth)]));
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surface,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Theme.of(context).dividerColor.withOpacity(.2)),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              CircleAvatar(backgroundColor: AppTheme.lightGreen, child: const Icon(Icons.grass, color: AppTheme.green)),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(c.name, style: const TextStyle(fontWeight: FontWeight.w800)),
+                    Text('${c.health} • Harvest ${c.harvest}', style: Theme.of(context).textTheme.bodySmall),
+                  ],
+                ),
+              ),
+              Text('${c.growth}%', style: const TextStyle(fontWeight: FontWeight.w800, color: AppTheme.green)),
+            ],
+          ),
+          const SizedBox(height: 12),
+          ProgressBar(c.growth),
+        ],
+      ),
+    );
+  }
 }
