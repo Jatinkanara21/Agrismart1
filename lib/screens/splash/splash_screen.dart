@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
 import '../onboarding/onboarding_screen.dart';
@@ -12,9 +14,10 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController controller;
-  late Animation<double> scale;
-  late Animation<double> fade;
+  late final AnimationController controller;
+  late final Animation<double> scale;
+  late final Animation<double> fade;
+  Timer? navigationTimer;
 
   @override
   void initState() {
@@ -27,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>
     fade = CurvedAnimation(parent: controller, curve: Curves.easeIn);
     controller.forward();
 
-    Future.delayed(const Duration(milliseconds: 1900), () {
+    navigationTimer = Timer(const Duration(milliseconds: 1900), () {
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
@@ -42,6 +45,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   void dispose() {
+    navigationTimer?.cancel();
     controller.dispose();
     super.dispose();
   }
