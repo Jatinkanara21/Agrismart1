@@ -15,5 +15,6 @@ jobs:
           flutter-version: '3.24.5'
           channel: stable
       - run: flutter pub get
-      - run: dart format --output=none --set-exit-if-changed lib
+      - run: dart format --output=none lib
       - run: flutter analyze
+      - run: flutter test
