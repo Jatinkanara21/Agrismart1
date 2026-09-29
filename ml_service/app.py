@@ -18,7 +18,7 @@ app = FastAPI(title="AgriSmart ML Service", version="1.2.0")
 
 
 class DiseaseRequest(BaseModel):
-    image_base64: str
+    image_base64: str = Field(..., min_length=1)
 
 
 class CropRequest(BaseModel):
@@ -162,7 +162,7 @@ def disease_detection(req: DiseaseRequest):
         from train_disease import train_disease_model
         train_disease_model(model_path)
     try:
-        raw = base64.b64decode(req.image_base64)
+        raw = base64.b64decode(req.image_base64, validate=True)
         image = Image.open(io.BytesIO(raw)).convert("RGB").resize((64, 64))
     except Exception as exc:
         raise HTTPException(400, f"Invalid image_base64: {exc}") from exc
