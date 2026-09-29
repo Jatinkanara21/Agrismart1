@@ -48,6 +48,9 @@ jobs:
       - name: Train pest risk model
         run: python train_pest.py
 
+      - name: Train disease model
+        run: python train_disease.py
+
       - name: Verify trained models
         run: |
           python - <<'PY'
@@ -113,6 +116,19 @@ jobs:
           prediction = model.predict(sample)[0]
           assert prediction in {"low", "medium", "high"}
           print(f"pest_risk={prediction}")
+          PY
+
+      - name: Verify disease model
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import joblib
+          model_path = Path("models/disease_model.joblib")
+          assert model_path.exists(), "Disease model was not created"
+          model = joblib.load(model_path)
+          prediction = model.predict([model._validate_X_predict([[0.2] * (64*64*3)], check_input=True)[0]])[0]
+          assert prediction in {"healthy", "leaf_spot", "rust", "blight"}
+          print(f"disease_prediction={prediction}")
           PY
 
       - name: Validate API imports
