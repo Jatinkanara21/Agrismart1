@@ -45,6 +45,9 @@ jobs:
       - name: Train yield model
         run: python train_yield.py
 
+      - name: Train pest risk model
+        run: python train_pest.py
+
       - name: Verify trained models
         run: |
           python - <<'PY'
@@ -85,6 +88,31 @@ jobs:
           print(f"crop_prediction={prediction}")
           print(f"classes={len(model.classes_)}")
           assert len(model.classes_) >= 2, "Expected multiple crop classes"
+          PY
+
+      - name: Verify pest risk model
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import joblib
+          import pandas as pd
+
+          model_path = Path("models/pest_model.joblib")
+          assert model_path.exists(), "Pest model was not created"
+          model = joblib.load(model_path)
+          sample = pd.DataFrame([{
+              "crop": "Cotton",
+              "pest": "Whitefly",
+              "temperature_c": 30.0,
+              "humidity_pct": 70.0,
+              "rainfall_mm": 120.0,
+              "soil_moisture_pct": 45.0,
+              "pest_count": 6.0,
+              "etl": 5.0,
+          }])
+          prediction = model.predict(sample)[0]
+          assert prediction in {"low", "medium", "high"}
+          print(f"pest_risk={prediction}")
           PY
 
       - name: Validate API imports
