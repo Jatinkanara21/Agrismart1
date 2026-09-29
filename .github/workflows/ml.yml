@@ -93,6 +93,32 @@ jobs:
           assert len(model.classes_) >= 2, "Expected multiple crop classes"
           PY
 
+      - name: Verify yield model
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import joblib
+          import pandas as pd
+
+          model_path = Path("models/yield_model.joblib")
+          assert model_path.exists(), "Yield model was not created"
+          model = joblib.load(model_path)
+          sample = pd.DataFrame([{
+              "Crop": "Rice",
+              "Crop_Year": 2020,
+              "Season": "Kharif",
+              "State": "Gujarat",
+              "Area": 1000.0,
+              "Annual_Rainfall": 800.0,
+              "Fertilizer": 150.0,
+              "Pesticide": 20.0,
+          }])
+          prediction = float(model.predict(sample)[0])
+          assert prediction == prediction, "Yield prediction is NaN"
+          assert prediction >= 0, "Yield prediction must be non-negative"
+          print(f"yield_prediction={prediction:.6f}")
+          PY
+
       - name: Verify pest risk model
         run: |
           python - <<'PY'
