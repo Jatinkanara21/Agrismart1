@@ -143,6 +143,8 @@ def yield_prediction(req: YieldRequest):
         "success": True,
         "predicted_yield": round(prediction, 6),
         "unit": "dataset-defined",
+        "dataset_type": "synthetic_development_data",
+        "warning": "Development model only; replace with validated real field data before agronomic use.",
     }
 
 
