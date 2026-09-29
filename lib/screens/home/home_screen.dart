@@ -24,10 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final pages = <Widget>[
-      _Dashboard(
-        onThemeToggle: widget.onThemeToggle,
-        onTab: (i) => setState(() => tab = i),
-      ),
+      _Dashboard(onThemeToggle: widget.onThemeToggle, onTab: (i) => setState(() => tab = i)),
       const CropsScreen(),
       const DiseaseScreen(),
       const MarketScreen(),
@@ -59,22 +56,29 @@ class _Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return SafeArea(
       child: RefreshIndicator(
         onRefresh: () => Future.delayed(const Duration(milliseconds: 700)),
         child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 18, 20, 30),
+          padding: const EdgeInsets.fromLTRB(18, 16, 18, 30),
           children: [
             Row(
               children: [
-                const CircleAvatar(radius: 25, child: Icon(Icons.person)),
+                Container(
+                  width: 48,
+                  height: 48,
+                  decoration: const BoxDecoration(color: AppTheme.lightGreen, shape: BoxShape.circle),
+                  child: const Icon(Icons.agriculture_rounded, color: AppTheme.green),
+                ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Good morning, Jatin', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-                      Text('Ready for a productive farm day?', style: Theme.of(context).textTheme.bodySmall),
+                      Text('Good morning, Jatin', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
+                      Text('Your farm at a glance', style: theme.textTheme.bodySmall),
                     ],
                   ),
                 ),
@@ -84,11 +88,15 @@ class _Dashboard extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 22),
+            const SizedBox(height: 18),
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                gradient: const LinearGradient(colors: [Color(0xFF2E7D32), Color(0xFF66A968)]),
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [AppTheme.deepGreen, AppTheme.green],
+                ),
                 borderRadius: BorderRadius.circular(26),
               ),
               child: Row(
@@ -97,36 +105,63 @@ class _Dashboard extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Today in your farm', style: TextStyle(color: Colors.white70)),
-                        SizedBox(height: 5),
-                        Text('28°C  •  Partly cloudy', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900)),
-                        SizedBox(height: 8),
-                        Text('72% humidity  •  18% rain', style: TextStyle(color: Colors.white70)),
+                        Text('Farm conditions', style: TextStyle(color: Colors.white70, fontWeight: FontWeight.w600)),
+                        SizedBox(height: 6),
+                        Text('28°C', style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w900)),
+                        SizedBox(height: 4),
+                        Text('Partly cloudy • 72% humidity', style: TextStyle(color: Colors.white70)),
                       ],
                     ),
                   ),
                   Container(
-                    width: 64,
-                    height: 64,
-                    decoration: BoxDecoration(color: Colors.white.withOpacity(.18), shape: BoxShape.circle),
-                    child: const Icon(Icons.wb_sunny_rounded, color: Colors.white, size: 34),
+                    width: 68,
+                    height: 68,
+                    decoration: BoxDecoration(color: Colors.white.withOpacity(.16), shape: BoxShape.circle),
+                    child: const Icon(Icons.wb_sunny_rounded, color: Colors.white, size: 36),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 26),
+            const SizedBox(height: 24),
             const SectionTitle('Farm overview'),
             const SizedBox(height: 12),
-            Row(
+            const Row(
               children: [
-                StatCard(icon: Icons.grass, value: '12', label: 'Total crops'),
-                const SizedBox(width: 10),
-                StatCard(icon: Icons.eco, value: '8', label: 'Active'),
-                const SizedBox(width: 10),
-                StatCard(icon: Icons.agriculture, value: '2', label: 'Harvest ready'),
+                Expanded(child: StatCard(icon: Icons.grass, value: '12', label: 'Crops')),
+                SizedBox(width: 10),
+                Expanded(child: StatCard(icon: Icons.eco, value: '8', label: 'Active')),
+                SizedBox(width: 10),
+                Expanded(child: StatCard(icon: Icons.agriculture, value: '2', label: 'Ready')),
               ],
             ),
-            const SizedBox(height: 26),
+            const SizedBox(height: 24),
+            const SectionTitle('AI Farm Tools'),
+            const SizedBox(height: 6),
+            Text('Use AgriSmart intelligence to understand your crops.', style: theme.textTheme.bodySmall),
+            const SizedBox(height: 12),
+            GridView.count(
+              crossAxisCount: 2,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              childAspectRatio: 1.45,
+              children: [
+                _AiToolCard(icon: Icons.spa_rounded, title: 'Crop Advisor', subtitle: 'Find a suitable crop', color: AppTheme.green, onTap: () => onTab(1)),
+                _AiToolCard(icon: Icons.science_rounded, title: 'Fertilizer', subtitle: 'Get nutrient guidance', color: const Color(0xFF7B5E35), onTap: () {}),
+                _AiToolCard(icon: Icons.insights_rounded, title: 'Yield Prediction', subtitle: 'Estimate crop yield', color: const Color(0xFF2D6A8A), onTap: () {}),
+                _AiToolCard(icon: Icons.bug_report_rounded, title: 'Pest Risk', subtitle: 'Check risk level', color: const Color(0xFFB66A1C), onTap: () {}),
+                _AiToolCard(icon: Icons.document_scanner_rounded, title: 'Disease Scan', subtitle: 'Analyze a leaf image', color: const Color(0xFF8A4D72), onTap: () => onTab(2)),
+                _AiToolCard(
+                  icon: Icons.cloud_outlined,
+                  title: 'Weather',
+                  subtitle: 'View farm conditions',
+                  color: const Color(0xFF427A9B),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const WeatherScreen())),
+                ),
+              ],
+            ),
+            const SizedBox(height: 24),
             const SectionTitle('Quick actions'),
             const SizedBox(height: 12),
             SingleChildScrollView(
@@ -145,26 +180,77 @@ class _Dashboard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 26),
+            const SizedBox(height: 24),
             SectionTitle('Your crops', action: 'View all', onTap: () => onTab(1)),
             const SizedBox(height: 12),
             ...MockData.crops.take(2).map((crop) => _CropMini(crop)),
-            const SizedBox(height: 18),
-            const SectionTitle('Smart insight'),
-            const SizedBox(height: 12),
+            const SizedBox(height: 8),
             Container(
-              padding: const EdgeInsets.all(18),
-              decoration: BoxDecoration(color: Colors.orange.withOpacity(.10), borderRadius: BorderRadius.circular(20)),
+              padding: const EdgeInsets.all(17),
+              decoration: BoxDecoration(
+                color: theme.colorScheme.primary.withOpacity(.07),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: theme.colorScheme.primary.withOpacity(.12)),
+              ),
               child: const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Icon(Icons.lightbulb_outline, color: Colors.orange),
+                  Icon(Icons.auto_awesome_rounded, color: AppTheme.green),
                   SizedBox(width: 12),
-                  Expanded(child: Text('Rain is likely tomorrow. Consider delaying irrigation and pesticide spraying today.', style: TextStyle(fontWeight: FontWeight.w600, height: 1.4))),
+                  Expanded(
+                    child: Text(
+                      'Smart insight: Rain is likely tomorrow. Consider delaying irrigation and pesticide spraying today.',
+                      style: TextStyle(fontWeight: FontWeight.w600, height: 1.4),
+                    ),
+                  ),
                 ],
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _AiToolCard extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final Color color;
+  final VoidCallback onTap;
+
+  const _AiToolCard({required this.icon, required this.title, required this.subtitle, required this.color, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Theme.of(context).colorScheme.surface,
+      borderRadius: BorderRadius.circular(18),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(18),
+        child: Container(
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(color: Theme.of(context).dividerColor.withOpacity(.18)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 38,
+                height: 38,
+                decoration: BoxDecoration(color: color.withOpacity(.12), borderRadius: BorderRadius.circular(12)),
+                child: Icon(icon, color: color, size: 21),
+              ),
+              const Spacer(),
+              Text(title, style: const TextStyle(fontWeight: FontWeight.w800)),
+              const SizedBox(height: 3),
+              Text(subtitle, maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.bodySmall),
+            ],
+          ),
         ),
       ),
     );
@@ -183,24 +269,24 @@ class _CropMini extends StatelessWidget {
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Theme.of(context).dividerColor.withOpacity(.2)),
+        border: Border.all(color: Theme.of(context).dividerColor.withOpacity(.18)),
       ),
       child: Column(
         children: [
           Row(
             children: [
-              CircleAvatar(backgroundColor: AppTheme.lightGreen, child: const Icon(Icons.grass, color: AppTheme.green)),
+              const CircleAvatar(backgroundColor: AppTheme.lightGreen, child: Icon(Icons.grass, color: AppTheme.green)),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(c.name, style: const TextStyle(fontWeight: FontWeight.w800)),
-                    Text('${c.health} • Harvest ${c.harvest}', style: Theme.of(context).textTheme.bodySmall),
+                    Text(c.health + ' • Harvest ' + c.harvest, style: Theme.of(context).textTheme.bodySmall),
                   ],
                 ),
               ),
-              Text('${c.growth}%', style: const TextStyle(fontWeight: FontWeight.w800, color: AppTheme.green)),
+              Text(c.growth.toString() + '%', style: const TextStyle(fontWeight: FontWeight.w800, color: AppTheme.green)),
             ],
           ),
           const SizedBox(height: 12),
