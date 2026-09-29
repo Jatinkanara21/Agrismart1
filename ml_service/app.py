@@ -99,14 +99,40 @@ def fertilizer_recommendation(req: FertilizerRequest):
     }
 
 
+class YieldRequest(BaseModel):
+    crop: str
+    crop_year: int = Field(..., ge=1990, le=2100)
+    season: str
+    state: str
+    area: float = Field(..., gt=0)
+    annual_rainfall: float = Field(..., ge=0)
+    fertilizer: float = Field(..., ge=0)
+    pesticide: float = Field(..., ge=0)
+
+
 @app.post("/api/v1/yield-prediction")
-def yield_prediction(payload: dict):
+def yield_prediction(req: YieldRequest):
     model_path = MODELS / "yield_model.joblib"
     if not model_path.exists():
-        raise HTTPException(503, "Yield model is not trained yet.")
+        from train_yield import train_yield_model
+        train_yield_model(model_path)
     model = joblib.load(model_path)
-    prediction = float(model.predict(pd.DataFrame([payload]))[0])
-    return {"success": True, "predicted_yield": prediction, "unit": "dataset-defined"}
+    x = pd.DataFrame([{
+        "Crop": req.crop,
+        "Crop_Year": req.crop_year,
+        "Season": req.season,
+        "State": req.state,
+        "Area": req.area,
+        "Annual_Rainfall": req.annual_rainfall,
+        "Fertilizer": req.fertilizer,
+        "Pesticide": req.pesticide,
+    }])
+    prediction = float(model.predict(x)[0])
+    return {
+        "success": True,
+        "predicted_yield": round(prediction, 6),
+        "unit": "dataset-defined",
+    }
 
 
 @app.post("/api/v1/pest-risk")
