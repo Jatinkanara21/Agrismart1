@@ -1,0 +1,801 @@
+Crop,Crop_Year,Season,State,Area,Annual_Rainfall,Fertilizer,Pesticide,Yield
+Rice,2001,Kharif,Gujarat,200,350,40,5,1.3007
+Wheat,2002,Kharif,Gujarat,337,433,87,24,1.3159
+Maize,2003,Kharif,Gujarat,474,516,134,43,2.0152
+Cotton,2004,Rabi,Gujarat,611,599,181,62,1.2325
+Chickpea,2005,Rabi,Gujarat,748,682,228,81,1.0263
+Groundnut,2006,Rabi,Gujarat,885,765,275,100,1.3041
+Sugarcane,2007,Summer,Gujarat,1022,848,322,119,68.3021
+Potato,2008,Summer,Maharashtra,1159,931,369,138,24.218
+Soybean,2009,Summer,Maharashtra,1296,1014,416,157,1.4788
+Millet,2010,Whole Year,Maharashtra,1433,1097,43,176,0.8463
+Rice,2011,Whole Year,Maharashtra,1570,1180,90,15,2.0465
+Wheat,2012,Whole Year,Maharashtra,1707,1263,137,34,2.0359
+Maize,2013,Kharif,Maharashtra,1844,1346,184,53,3.0697
+Cotton,2014,Kharif,Maharashtra,1981,1429,231,72,1.8507
+Chickpea,2015,Kharif,Punjab,2118,1512,278,91,1.4183
+Groundnut,2016,Rabi,Punjab,2255,1595,325,110,1.7814
+Sugarcane,2017,Rabi,Punjab,2392,1678,372,129,92.2884
+Potato,2018,Rabi,Punjab,2529,1761,419,148,34.617
+Soybean,2019,Summer,Punjab,2666,394,46,167,0.7536
+Millet,2020,Summer,Punjab,2803,477,93,6,0.7234
+Rice,2001,Summer,Punjab,2940,560,140,25,1.756
+Wheat,2002,Whole Year,Karnataka,3077,643,187,44,1.6356
+Maize,2003,Whole Year,Karnataka,3214,726,234,63,2.4772
+Cotton,2004,Whole Year,Karnataka,3351,809,281,82,1.5001
+Chickpea,2005,Kharif,Karnataka,3488,892,328,101,1.2378
+Groundnut,2006,Kharif,Karnataka,3625,975,375,120,1.56
+Sugarcane,2007,Kharif,Karnataka,3762,1058,422,139,81.0909
+Potato,2008,Rabi,Karnataka,3899,1141,49,158,18.9147
+Soybean,2009,Rabi,Madhya Pradesh,4036,1224,96,177,1.0968
+Millet,2010,Rabi,Madhya Pradesh,4173,1307,143,16,1.0365
+Rice,2011,Summer,Madhya Pradesh,4310,1390,190,35,2.4802
+Wheat,2012,Summer,Madhya Pradesh,4447,1473,237,54,2.4442
+Maize,2013,Summer,Madhya Pradesh,4584,1556,284,73,3.6543
+Cotton,2014,Whole Year,Madhya Pradesh,4721,1639,331,92,2.1863
+Chickpea,2015,Whole Year,Madhya Pradesh,4858,1722,378,111,1.7838
+Groundnut,2016,Whole Year,Rajasthan,4995,355,425,130,1.1977
+Sugarcane,2017,Kharif,Rajasthan,5132,438,52,149,38.837
+Potato,2018,Kharif,Rajasthan,5269,521,99,168,15.1437
+Soybean,2019,Kharif,Rajasthan,5406,604,146,7,0.9456
+Millet,2020,Rabi,Rajasthan,5543,687,193,26,0.8968
+Rice,2001,Rabi,Rajasthan,5680,770,240,45,2.1537
+Wheat,2002,Rabi,Rajasthan,5817,853,287,64,2.1299
+Maize,2003,Summer,Uttar Pradesh,5954,936,334,83,2.9801
+Cotton,2004,Summer,Uttar Pradesh,6091,1019,381,102,1.7901
+Chickpea,2005,Summer,Uttar Pradesh,6228,1102,428,121,1.4662
+Groundnut,2006,Whole Year,Uttar Pradesh,6365,1185,55,140,1.1378
+Sugarcane,2007,Whole Year,Uttar Pradesh,6502,1268,102,159,60.2444
+Potato,2008,Whole Year,Uttar Pradesh,6639,1351,149,178,23.1212
+Soybean,2009,Kharif,Uttar Pradesh,6776,1434,196,17,1.4227
+Millet,2010,Kharif,Bihar,6913,1517,243,36,1.2416
+Rice,2011,Kharif,Bihar,7050,1600,290,55,2.9464
+Wheat,2012,Rabi,Bihar,7187,1683,337,74,2.8818
+Maize,2013,Rabi,Bihar,7324,1766,384,93,4.2588
+Cotton,2014,Rabi,Bihar,7461,399,431,112,1.4821
+Chickpea,2015,Summer,Bihar,7598,482,58,131,0.759
+Groundnut,2016,Summer,Bihar,7735,565,105,150,0.98
+Sugarcane,2017,Summer,Gujarat,7872,648,152,169,48.5639
+Potato,2018,Whole Year,Gujarat,8009,731,199,8,18.7153
+Soybean,2019,Whole Year,Gujarat,8146,814,246,27,1.1563
+Millet,2020,Whole Year,Gujarat,8283,897,293,46,1.0863
+Rice,2001,Kharif,Gujarat,8420,980,340,65,2.5861
+Wheat,2002,Kharif,Gujarat,8557,1063,387,84,2.5374
+Maize,2003,Kharif,Gujarat,8694,1146,434,103,3.7791
+Cotton,2004,Rabi,Maharashtra,8831,1229,61,122,1.3072
+Chickpea,2005,Rabi,Maharashtra,8968,1312,108,141,1.0904
+Groundnut,2006,Rabi,Maharashtra,9105,1395,155,160,1.3873
+Sugarcane,2007,Summer,Maharashtra,9242,1478,202,179,72.7178
+Potato,2008,Summer,Maharashtra,9379,1561,249,18,27.6564
+Soybean,2009,Summer,Maharashtra,9516,1644,296,37,1.6879
+Millet,2010,Whole Year,Maharashtra,9653,1727,343,56,1.5677
+Rice,2011,Whole Year,Punjab,9790,360,390,75,1.9901
+Wheat,2012,Whole Year,Punjab,9927,443,437,94,1.9678
+Maize,2013,Kharif,Punjab,264,526,64,113,1.8391
+Cotton,2014,Kharif,Punjab,401,609,111,132,1.1312
+Chickpea,2015,Kharif,Punjab,538,692,158,151,0.9466
+Groundnut,2016,Rabi,Punjab,675,775,205,170,1.2083
+Sugarcane,2017,Rabi,Punjab,812,858,252,9,63.5357
+Potato,2018,Rabi,Karnataka,949,941,299,28,22.6092
+Soybean,2019,Summer,Karnataka,1086,1024,346,47,1.3851
+Millet,2020,Summer,Karnataka,1223,1107,393,66,1.2912
+Rice,2001,Summer,Karnataka,1360,1190,440,85,3.0522
+Wheat,2002,Whole Year,Karnataka,1497,1273,67,104,1.8565
+Maize,2003,Whole Year,Karnataka,1634,1356,114,123,2.8152
+Cotton,2004,Whole Year,Karnataka,1771,1439,161,142,1.7058
+Chickpea,2005,Kharif,Madhya Pradesh,1908,1522,208,161,1.3131
+Groundnut,2006,Kharif,Madhya Pradesh,2045,1605,255,180,1.6559
+Sugarcane,2007,Kharif,Madhya Pradesh,2182,1688,302,19,86.101
+Potato,2008,Rabi,Madhya Pradesh,2319,1771,349,38,32.307
+Soybean,2009,Rabi,Madhya Pradesh,2456,404,396,57,1.1494
+Millet,2010,Rabi,Madhya Pradesh,2593,487,443,76,1.0787
+Rice,2011,Summer,Madhya Pradesh,2730,570,70,95,1.6037
+Wheat,2012,Summer,Rajasthan,2867,653,117,114,1.5021
+Maize,2013,Summer,Rajasthan,3004,736,164,133,2.2862
+Cotton,2014,Whole Year,Rajasthan,3141,819,211,152,1.3905
+Chickpea,2015,Whole Year,Rajasthan,3278,902,258,171,1.1519
+Groundnut,2016,Whole Year,Rajasthan,3415,985,305,10,1.4569
+Sugarcane,2017,Kharif,Rajasthan,3552,1068,352,29,75.9772
+Potato,2018,Kharif,Rajasthan,3689,1151,399,48,28.7682
+Soybean,2019,Kharif,Uttar Pradesh,3826,1234,446,67,1.6313
+Millet,2020,Rabi,Uttar Pradesh,3963,1317,73,86,0.9459
+Rice,2001,Rabi,Uttar Pradesh,4100,1400,120,105,2.276
+Wheat,2002,Rabi,Uttar Pradesh,4237,1483,167,124,2.2541
+Maize,2003,Summer,Uttar Pradesh,4374,1566,214,143,3.3851
+Cotton,2004,Summer,Uttar Pradesh,4511,1649,261,162,2.0332
+Chickpea,2005,Summer,Uttar Pradesh,4648,1732,308,181,1.6649
+Groundnut,2006,Whole Year,Bihar,4785,365,355,20,1.1239
+Sugarcane,2007,Whole Year,Bihar,4922,448,402,39,59.0528
+Potato,2008,Whole Year,Bihar,5059,531,449,58,22.5188
+Soybean,2009,Kharif,Bihar,5196,614,76,77,0.8641
+Millet,2010,Kharif,Bihar,5333,697,123,96,0.8241
+Rice,2011,Kharif,Bihar,5470,780,170,115,1.9886
+Wheat,2012,Rabi,Bihar,5607,863,217,134,1.9752
+Maize,2013,Rabi,Gujarat,5744,946,264,153,2.7745
+Cotton,2014,Rabi,Gujarat,5881,1029,311,172,1.6724
+Chickpea,2015,Summer,Gujarat,6018,1112,358,11,1.3743
+Groundnut,2016,Summer,Gujarat,6155,1195,405,30,1.7253
+Sugarcane,2017,Summer,Gujarat,6292,1278,452,49,89.3575
+Potato,2018,Whole Year,Gujarat,6429,1361,79,68,21.1143
+Soybean,2019,Whole Year,Gujarat,6566,1444,126,87,1.3064
+Millet,2020,Whole Year,Maharashtra,6703,1527,173,106,1.1457
+Rice,2001,Kharif,Maharashtra,6840,1610,220,125,2.7307
+Wheat,2002,Kharif,Maharashtra,6977,1693,267,144,2.6813
+Maize,2003,Kharif,Maharashtra,7114,1776,314,163,3.9648
+Cotton,2004,Rabi,Maharashtra,7251,409,361,182,1.3912
+Chickpea,2005,Rabi,Maharashtra,7388,492,408,21,1.1506
+Groundnut,2006,Rabi,Maharashtra,7525,575,455,40,1.4533
+Sugarcane,2007,Summer,Punjab,7662,658,82,59,44.4113
+Potato,2008,Summer,Punjab,7799,741,129,78,17.2077
+Soybean,2009,Summer,Punjab,7936,824,176,97,1.0683
+Millet,2010,Whole Year,Punjab,8073,907,223,116,1.0079
+Rice,2011,Whole Year,Punjab,8210,990,270,135,2.4087
+Wheat,2012,Whole Year,Punjab,8347,1073,317,154,2.3716
+Maize,2013,Kharif,Punjab,8484,1156,364,173,3.5432
+Cotton,2014,Kharif,Karnataka,8621,1239,411,12,1.9762
+Chickpea,2015,Kharif,Karnataka,8758,1322,458,31,1.613
+Groundnut,2016,Rabi,Karnataka,8895,1405,85,50,1.2678
+Sugarcane,2017,Rabi,Karnataka,9032,1488,132,69,66.8143
+Potato,2018,Rabi,Karnataka,9169,1571,179,88,25.5339
+Soybean,2019,Summer,Karnataka,9306,1654,226,107,1.5651
+Millet,2020,Summer,Karnataka,9443,1737,273,126,1.4592
+Rice,2001,Summer,Madhya Pradesh,9580,370,320,145,1.8629
+Wheat,2002,Whole Year,Madhya Pradesh,9717,453,367,164,1.8476
+Maize,2003,Whole Year,Madhya Pradesh,9854,536,414,183,2.7795
+Cotton,2004,Whole Year,Madhya Pradesh,9991,619,41,22,1.0289
+Chickpea,2005,Kharif,Madhya Pradesh,328,702,88,41,0.8662
+Groundnut,2006,Kharif,Madhya Pradesh,465,785,135,60,1.1116
+Sugarcane,2007,Kharif,Madhya Pradesh,602,868,182,79,58.7288
+Potato,2008,Rabi,Rajasthan,739,951,229,98,20.987
+Soybean,2009,Rabi,Rajasthan,876,1034,276,117,1.2906
+Millet,2010,Rabi,Rajasthan,1013,1117,323,136,1.2073
+Rice,2011,Summer,Rajasthan,1150,1200,370,155,2.8627
+Wheat,2012,Summer,Rajasthan,1287,1283,417,174,2.7984
+Maize,2013,Summer,Rajasthan,1424,1366,44,13,2.5589
+Cotton,2014,Whole Year,Rajasthan,1561,1449,91,32,1.5599
+Chickpea,2015,Whole Year,Uttar Pradesh,1698,1532,138,51,1.2073
+Groundnut,2016,Whole Year,Uttar Pradesh,1835,1615,185,70,1.5297
+Sugarcane,2017,Kharif,Uttar Pradesh,1972,1698,232,89,79.8745
+Potato,2018,Kharif,Uttar Pradesh,2109,1781,279,108,29.997
+Soybean,2019,Kharif,Uttar Pradesh,2246,414,326,127,1.0763
+Millet,2020,Rabi,Uttar Pradesh,2383,497,373,146,1.0131
+Rice,2001,Rabi,Uttar Pradesh,2520,580,420,165,2.4165
+Wheat,2002,Rabi,Bihar,2657,663,47,184,1.3673
+Maize,2003,Summer,Bihar,2794,746,94,23,2.0935
+Cotton,2004,Summer,Bihar,2931,829,141,42,1.28
+Chickpea,2005,Summer,Bihar,3068,912,188,61,1.0653
+Groundnut,2006,Whole Year,Bihar,3205,995,235,80,1.353
+Sugarcane,2007,Whole Year,Bihar,3342,1078,282,99,70.8234
+Potato,2008,Whole Year,Bihar,3479,1161,329,118,26.9077
+Soybean,2009,Kharif,Gujarat,3616,1244,376,137,1.5305
+Millet,2010,Kharif,Gujarat,3753,1327,423,156,1.4216
+Rice,2011,Kharif,Gujarat,3890,1410,50,175,2.0704
+Wheat,2012,Rabi,Gujarat,4027,1493,97,14,2.0628
+Maize,2013,Rabi,Gujarat,4164,1576,144,33,3.114
+Cotton,2014,Rabi,Gujarat,4301,1659,191,52,1.8792
+Chickpea,2015,Summer,Gujarat,4438,1742,238,71,1.5453
+Groundnut,2016,Summer,Maharashtra,4575,375,285,90,1.0493
+Sugarcane,2017,Summer,Maharashtra,4712,458,332,109,55.3128
+Potato,2018,Whole Year,Maharashtra,4849,541,379,128,21.1556
+Soybean,2019,Whole Year,Maharashtra,4986,624,426,147,1.2983
+Millet,2020,Whole Year,Maharashtra,5123,707,53,166,0.7507
+Rice,2001,Kharif,Maharashtra,5260,790,100,5,1.8222
+Wheat,2002,Kharif,Maharashtra,5397,873,147,24,1.8192
+Maize,2003,Kharif,Punjab,5534,956,194,43,2.5672
+Cotton,2004,Rabi,Punjab,5671,1039,241,62,1.5539
+Chickpea,2005,Rabi,Punjab,5808,1122,288,81,1.2816
+Groundnut,2006,Rabi,Punjab,5945,1205,335,100,1.6143
+Sugarcane,2007,Summer,Punjab,6082,1288,382,119,83.8644
+Potato,2008,Summer,Punjab,6219,1371,429,138,31.643
+Soybean,2009,Summer,Punjab,6356,1454,56,157,1.1893
+Millet,2010,Whole Year,Karnataka,6493,1537,103,176,1.0492
+Rice,2011,Whole Year,Karnataka,6630,1620,150,15,2.5136
+Wheat,2012,Whole Year,Karnataka,6767,1703,197,34,2.4795
+Maize,2013,Kharif,Karnataka,6904,1786,244,53,3.6708
+Cotton,2014,Kharif,Karnataka,7041,419,291,72,1.2993
+Chickpea,2015,Kharif,Karnataka,7178,502,338,91,1.0781
+Groundnut,2016,Rabi,Karnataka,7315,585,385,110,1.3657
+Sugarcane,2017,Rabi,Madhya Pradesh,7452,668,432,129,66.5328
+Potato,2018,Rabi,Madhya Pradesh,7589,751,59,148,15.6867
+Soybean,2019,Summer,Madhya Pradesh,7726,834,106,167,0.9795
+Millet,2020,Summer,Madhya Pradesh,7863,917,153,6,0.9288
+Rice,2001,Summer,Madhya Pradesh,8000,1000,200,25,2.2299
+Wheat,2002,Whole Year,Madhya Pradesh,8137,1083,247,44,2.2044
+Maize,2003,Whole Year,Madhya Pradesh,8274,1166,294,63,3.3056
+Cotton,2004,Whole Year,Rajasthan,8411,1249,341,82,1.8497
+Chickpea,2005,Kharif,Rajasthan,8548,1332,388,101,1.5143
+Groundnut,2006,Kharif,Rajasthan,8685,1415,435,120,1.8946
+Sugarcane,2007,Kharif,Rajasthan,8822,1498,62,139,60.8714
+Potato,2008,Rabi,Rajasthan,8959,1581,109,158,23.3975
+Soybean,2009,Rabi,Rajasthan,9096,1664,156,177,1.4415
+Millet,2010,Rabi,Rajasthan,9233,1747,203,16,1.3501
+Rice,2011,Summer,Uttar Pradesh,9370,380,250,35,1.7343
+Wheat,2012,Summer,Uttar Pradesh,9507,463,297,54,1.7261
+Maize,2013,Summer,Uttar Pradesh,9644,546,344,73,2.6051
+Cotton,2014,Whole Year,Uttar Pradesh,9781,629,391,92,1.5726
+Chickpea,2015,Whole Year,Uttar Pradesh,9918,712,438,111,1.294
+Groundnut,2016,Whole Year,Uttar Pradesh,255,795,65,130,1.0141
+Sugarcane,2017,Kharif,Uttar Pradesh,392,878,112,149,53.8812
+Potato,2018,Kharif,Bihar,529,961,159,168,19.3516
+Soybean,2019,Kharif,Bihar,666,1044,206,7,1.1954
+Millet,2020,Rabi,Bihar,803,1127,253,26,1.1227
+Rice,2001,Rabi,Bihar,940,1210,300,45,2.6717
+Wheat,2002,Rabi,Bihar,1077,1293,347,64,2.6202
+Maize,2003,Summer,Bihar,1214,1376,394,83,3.9007
+Cotton,2004,Summer,Bihar,1351,1459,441,102,2.3247
+Chickpea,2005,Summer,Gujarat,1488,1542,68,121,1.1007
+Groundnut,2006,Whole Year,Gujarat,1625,1625,115,140,1.4026
+Sugarcane,2007,Whole Year,Gujarat,1762,1708,162,159,73.609
+Potato,2008,Whole Year,Gujarat,1899,1791,209,178,27.687
+Soybean,2009,Kharif,Gujarat,2036,424,256,17,1.0024
+Millet,2010,Kharif,Gujarat,2173,507,303,36,0.9468
+Rice,2011,Kharif,Gujarat,2310,590,350,55,2.2656
+Wheat,2012,Rabi,Maharashtra,2447,673,397,74,2.0832
+Maize,2013,Rabi,Maharashtra,2584,756,444,93,3.1186
+Cotton,2014,Rabi,Maharashtra,2721,839,71,112,1.1685
+Chickpea,2015,Summer,Maharashtra,2858,922,118,131,0.978
+Groundnut,2016,Summer,Maharashtra,2995,1005,165,150,1.2483
+Sugarcane,2017,Summer,Maharashtra,3132,1088,212,169,65.6293
+Potato,2018,Whole Year,Maharashtra,3269,1171,259,8,25.0332
+Soybean,2019,Whole Year,Punjab,3406,1254,306,27,1.4289
+Millet,2020,Whole Year,Punjab,3543,1337,353,46,1.3316
+Rice,2001,Kharif,Punjab,3680,1420,400,65,3.1464
+Wheat,2002,Kharif,Punjab,3817,1503,447,84,3.0657
+Maize,2003,Kharif,Punjab,3954,1586,74,103,2.8413
+Cotton,2004,Rabi,Punjab,4091,1669,121,122,1.7242
+Chickpea,2005,Rabi,Punjab,4228,1752,168,141,1.424
+Groundnut,2006,Rabi,Karnataka,4365,385,215,160,0.9739
+Sugarcane,2007,Summer,Karnataka,4502,468,262,179,51.5342
+Potato,2008,Summer,Karnataka,4639,551,309,18,19.7788
+Soybean,2009,Summer,Karnataka,4776,634,356,37,1.2176
+Millet,2010,Whole Year,Karnataka,4913,717,403,56,1.1403
+Rice,2011,Whole Year,Karnataka,5050,800,450,75,2.707
+Wheat,2012,Whole Year,Karnataka,5187,883,77,94,1.662
+Maize,2013,Kharif,Madhya Pradesh,5324,966,124,113,2.3582
+Cotton,2014,Kharif,Madhya Pradesh,5461,1049,171,132,1.4343
+Chickpea,2015,Kharif,Madhya Pradesh,5598,1132,218,151,1.1881
+Groundnut,2016,Rabi,Madhya Pradesh,5735,1215,265,170,1.5025
+Sugarcane,2017,Rabi,Madhya Pradesh,5872,1298,312,9,78.3315
+Potato,2018,Rabi,Madhya Pradesh,6009,1381,359,28,29.6501
+Soybean,2019,Summer,Madhya Pradesh,6146,1464,406,47,1.8019
+Millet,2020,Summer,Rajasthan,6283,1547,453,66,1.555
+Rice,2001,Summer,Rajasthan,6420,1630,80,85,2.295
+Wheat,2002,Whole Year,Rajasthan,6557,1713,127,104,2.2765
+Maize,2003,Whole Year,Rajasthan,6694,1796,174,123,3.3768
+Cotton,2004,Whole Year,Rajasthan,6831,429,221,142,1.2064
+Chickpea,2005,Kharif,Rajasthan,6968,512,268,161,1.0048
+Groundnut,2006,Kharif,Rajasthan,7105,595,315,180,1.2773
+Sugarcane,2007,Kharif,Uttar Pradesh,7242,678,362,19,62.4184
+Potato,2008,Rabi,Uttar Pradesh,7379,761,409,38,23.7548
+Soybean,2009,Rabi,Uttar Pradesh,7516,844,456,57,1.4511
+Millet,2010,Rabi,Uttar Pradesh,7653,927,83,76,0.8491
+Rice,2011,Summer,Uttar Pradesh,7790,1010,130,95,2.0496
+Wheat,2012,Summer,Uttar Pradesh,7927,1093,177,114,2.0359
+Maize,2013,Summer,Uttar Pradesh,8064,1176,224,133,3.0661
+Cotton,2014,Whole Year,Bihar,8201,1259,271,152,1.7224
+Chickpea,2015,Whole Year,Bihar,8338,1342,318,171,1.415
+Groundnut,2016,Whole Year,Bihar,8475,1425,365,10,1.7759
+Sugarcane,2017,Kharif,Bihar,8612,1508,412,29,91.9525
+Potato,2018,Kharif,Bihar,8749,1591,459,48,34.5864
+Soybean,2019,Kharif,Bihar,8886,1674,86,67,1.3171
+Millet,2020,Rabi,Bihar,9023,1757,133,86,1.2378
+Rice,2001,Rabi,Gujarat,9160,390,180,105,1.6043
+Wheat,2002,Rabi,Gujarat,9297,473,227,124,1.6034
+Maize,2003,Summer,Gujarat,9434,556,274,143,2.429
+Cotton,2004,Summer,Gujarat,9571,639,321,162,1.4713
+Chickpea,2005,Summer,Gujarat,9708,722,368,181,1.2144
+Groundnut,2006,Whole Year,Gujarat,9845,805,415,20,1.5311
+Sugarcane,2007,Whole Year,Gujarat,9982,888,42,39,48.993
+Potato,2008,Whole Year,Maharashtra,319,971,89,58,17.7029
+Soybean,2009,Kharif,Maharashtra,456,1054,136,77,1.0994
+Millet,2010,Kharif,Maharashtra,593,1137,183,96,1.0374
+Rice,2011,Kharif,Maharashtra,730,1220,230,115,2.4793
+Wheat,2012,Rabi,Maharashtra,867,1303,277,134,2.4409
+Maize,2013,Rabi,Maharashtra,1004,1386,324,153,3.6462
+Cotton,2014,Rabi,Maharashtra,1141,1469,371,172,2.1798
+Chickpea,2015,Summer,Punjab,1278,1552,418,11,1.6579
+Groundnut,2016,Summer,Punjab,1415,1635,45,30,1.2747
+Sugarcane,2017,Summer,Punjab,1552,1718,92,49,67.3045
+Potato,2018,Whole Year,Punjab,1689,351,139,68,14.8578
+Soybean,2019,Whole Year,Punjab,1826,434,186,87,0.9277
+Millet,2020,Whole Year,Punjab,1963,517,233,106,0.8799
+Rice,2001,Kharif,Punjab,2100,600,280,125,2.1133
+Wheat,2002,Kharif,Karnataka,2237,683,327,144,1.9497
+Maize,2003,Kharif,Karnataka,2374,766,374,163,2.9276
+Cotton,2004,Rabi,Karnataka,2511,849,421,182,1.759
+Chickpea,2005,Rabi,Karnataka,2648,932,48,21,0.8899
+Groundnut,2006,Rabi,Karnataka,2785,1015,95,40,1.1427
+Sugarcane,2007,Summer,Karnataka,2922,1098,142,59,60.3949
+Potato,2008,Summer,Karnataka,3059,1181,189,78,23.1446
+Soybean,2009,Summer,Madhya Pradesh,3196,1264,236,97,1.3267
+Millet,2010,Whole Year,Madhya Pradesh,3333,1347,283,116,1.2409
+Rice,2011,Whole Year,Madhya Pradesh,3470,1430,330,135,2.9422
+Wheat,2012,Whole Year,Madhya Pradesh,3607,1513,377,154,2.8756
+Maize,2013,Kharif,Madhya Pradesh,3744,1596,424,173,4.2671
+Cotton,2014,Kharif,Madhya Pradesh,3881,1679,51,12,1.5683
+Chickpea,2015,Kharif,Madhya Pradesh,4018,1762,98,31,1.2991
+Groundnut,2016,Rabi,Rajasthan,4155,395,145,50,0.8976
+Sugarcane,2017,Rabi,Rajasthan,4292,478,192,69,47.7169
+Potato,2018,Rabi,Rajasthan,4429,561,239,88,18.3885
+Soybean,2019,Summer,Rajasthan,4566,644,286,107,1.1362
+Millet,2020,Summer,Rajasthan,4703,727,333,126,1.0676
+Rice,2001,Summer,Rajasthan,4840,810,380,145,2.542
+Wheat,2002,Whole Year,Rajasthan,4977,893,427,164,2.4946
+Maize,2003,Whole Year,Uttar Pradesh,5114,976,54,183,2.1476
+Cotton,2004,Whole Year,Uttar Pradesh,5251,1059,101,22,1.3139
+Chickpea,2005,Kharif,Uttar Pradesh,5388,1142,148,41,1.094
+Groundnut,2006,Kharif,Uttar Pradesh,5525,1225,195,60,1.3899
+Sugarcane,2007,Kharif,Uttar Pradesh,5662,1308,242,79,72.7588
+Potato,2008,Rabi,Uttar Pradesh,5799,1391,289,98,27.6431
+Soybean,2009,Rabi,Uttar Pradesh,5936,1474,336,117,1.6856
+Millet,2010,Rabi,Bihar,6073,1557,383,136,1.4591
+Rice,2011,Summer,Bihar,6210,1640,430,155,3.4369
+Wheat,2012,Summer,Bihar,6347,1723,57,174,2.0721
+Maize,2013,Summer,Bihar,6484,356,104,13,1.8095
+Cotton,2014,Whole Year,Bihar,6621,439,151,32,1.1125
+Chickpea,2015,Whole Year,Bihar,6758,522,198,51,0.9308
+Groundnut,2016,Whole Year,Bihar,6895,605,245,70,1.188
+Sugarcane,2017,Kharif,Gujarat,7032,688,292,89,58.2658
+Potato,2018,Kharif,Gujarat,7169,771,339,108,22.2473
+Soybean,2019,Kharif,Gujarat,7306,854,386,127,1.3631
+Millet,2020,Rabi,Gujarat,7443,937,433,146,1.2709
+Rice,2001,Rabi,Gujarat,7580,1020,60,165,1.8679
+Wheat,2002,Rabi,Gujarat,7717,1103,107,184,1.8662
+Maize,2003,Summer,Gujarat,7854,1186,154,23,2.8248
+Cotton,2004,Summer,Maharashtra,7991,1269,201,42,1.5941
+Chickpea,2005,Summer,Maharashtra,8128,1352,248,61,1.3149
+Groundnut,2006,Whole Year,Maharashtra,8265,1435,295,80,1.6564
+Sugarcane,2007,Whole Year,Maharashtra,8402,1518,342,99,86.0491
+Potato,2008,Whole Year,Maharashtra,8539,1601,389,118,32.4639
+Soybean,2009,Kharif,Maharashtra,8676,1684,436,137,1.9669
+Millet,2010,Kharif,Maharashtra,8813,1767,63,156,1.1242
+Rice,2011,Kharif,Punjab,8950,400,110,175,1.4729
+Wheat,2012,Rabi,Punjab,9087,483,157,14,1.4795
+Maize,2013,Rabi,Punjab,9224,566,204,33,2.2512
+Cotton,2014,Rabi,Punjab,9361,649,251,52,1.369
+Chickpea,2015,Summer,Punjab,9498,732,298,71,1.134
+Groundnut,2016,Summer,Punjab,9635,815,345,90,1.4344
+Sugarcane,2017,Summer,Punjab,9772,898,392,109,74.8068
+Potato,2018,Whole Year,Karnataka,9909,981,439,128,26.4219
+Soybean,2019,Whole Year,Karnataka,246,1064,66,147,1.0026
+Millet,2020,Whole Year,Karnataka,383,1147,113,166,0.9515
+Rice,2001,Kharif,Karnataka,520,1230,160,5,2.2855
+Wheat,2002,Kharif,Karnataka,657,1313,207,24,2.2602
+Maize,2003,Kharif,Karnataka,794,1396,254,43,3.3898
+Cotton,2004,Rabi,Karnataka,931,1479,301,62,2.034
+Chickpea,2005,Rabi,Madhya Pradesh,1068,1562,348,81,1.552
+Groundnut,2006,Rabi,Madhya Pradesh,1205,1645,395,100,1.9416
+Sugarcane,2007,Summer,Madhya Pradesh,1342,1728,442,119,100.2303
+Potato,2008,Summer,Madhya Pradesh,1479,361,69,138,13.5736
+Soybean,2009,Summer,Madhya Pradesh,1616,444,116,157,0.8522
+Millet,2010,Whole Year,Madhya Pradesh,1753,527,163,176,0.8123
+Rice,2011,Whole Year,Madhya Pradesh,1890,610,210,15,1.9595
+Wheat,2012,Whole Year,Rajasthan,2027,693,257,34,1.8149
+Maize,2013,Kharif,Rajasthan,2164,776,304,53,2.7349
+Cotton,2014,Kharif,Rajasthan,2301,859,351,72,1.6485
+Chickpea,2015,Kharif,Rajasthan,2438,942,398,91,1.3546
+Groundnut,2016,Rabi,Rajasthan,2575,1025,445,110,1.7008
+Sugarcane,2017,Rabi,Rajasthan,2712,1108,72,129,55.1204
+Potato,2018,Rabi,Rajasthan,2849,1191,119,148,21.2418
+Soybean,2019,Summer,Uttar Pradesh,2986,1274,166,167,1.2236
+Millet,2020,Summer,Uttar Pradesh,3123,1357,213,6,1.1497
+Rice,2001,Summer,Uttar Pradesh,3260,1440,260,25,2.7366
+Wheat,2002,Whole Year,Uttar Pradesh,3397,1523,307,44,2.6842
+Maize,2003,Whole Year,Uttar Pradesh,3534,1606,354,63,3.996
+Cotton,2004,Whole Year,Uttar Pradesh,3671,1689,401,82,2.3815
+Chickpea,2005,Kharif,Uttar Pradesh,3808,1772,448,101,1.9237
+Groundnut,2006,Kharif,Bihar,3945,405,75,120,0.8206
+Sugarcane,2007,Kharif,Bihar,4082,488,122,139,43.861
+Potato,2008,Rabi,Bihar,4219,571,169,158,16.9846
+Soybean,2009,Rabi,Bihar,4356,654,216,177,1.054
+Millet,2010,Rabi,Bihar,4493,737,263,16,0.9942
+Rice,2011,Summer,Bihar,4630,820,310,35,2.3755
+Wheat,2012,Summer,Bihar,4767,903,357,54,2.3387
+Maize,2013,Summer,Gujarat,4904,986,404,73,3.2589
+Cotton,2014,Whole Year,Gujarat,5041,1069,451,92,1.9502
+Chickpea,2015,Whole Year,Gujarat,5178,1152,78,111,0.9992
+Groundnut,2016,Whole Year,Gujarat,5315,1235,125,130,1.2764
+Sugarcane,2017,Kharif,Gujarat,5452,1318,172,149,67.1462
+Potato,2018,Kharif,Gujarat,5589,1401,219,168,25.6222
+Soybean,2019,Kharif,Gujarat,5726,1484,266,7,1.5685
+Millet,2020,Rabi,Maharashtra,5863,1567,313,26,1.3626
+Rice,2001,Rabi,Maharashtra,6000,1650,360,45,3.2198
+Wheat,2002,Rabi,Maharashtra,6137,1733,407,64,3.1372
+Maize,2003,Summer,Maharashtra,6274,366,454,83,2.6858
+Cotton,2004,Summer,Maharashtra,6411,449,81,102,1.0177
+Chickpea,2005,Summer,Maharashtra,6548,532,128,121,0.8561
+Groundnut,2006,Whole Year,Maharashtra,6685,615,175,140,1.0979
+Sugarcane,2007,Whole Year,Punjab,6822,698,222,159,54.0749
+Potato,2008,Whole Year,Punjab,6959,781,269,178,20.7263
+Soybean,2009,Kharif,Punjab,7096,864,316,17,1.2743
+Millet,2010,Kharif,Punjab,7233,947,363,36,1.1919
+Rice,2011,Kharif,Punjab,7370,1030,410,55,2.826
+Wheat,2012,Rabi,Punjab,7507,1113,457,74,2.7625
+Maize,2013,Rabi,Punjab,7644,1196,84,93,2.5817
+Cotton,2014,Rabi,Karnataka,7781,1279,131,112,1.4648
+Chickpea,2015,Summer,Karnataka,7918,1362,178,131,1.2141
+Groundnut,2016,Summer,Karnataka,8055,1445,225,150,1.5361
+Sugarcane,2017,Summer,Karnataka,8192,1528,272,169,80.1062
+Potato,2018,Whole Year,Karnataka,8329,1611,319,8,30.3275
+Soybean,2019,Whole Year,Karnataka,8466,1694,366,27,1.8433
+Millet,2020,Whole Year,Karnataka,8603,1777,413,46,1.692
+Rice,2001,Kharif,Madhya Pradesh,8740,410,40,65,1.3402
+Wheat,2002,Kharif,Madhya Pradesh,8877,493,87,84,1.3543
+Maize,2003,Kharif,Madhya Pradesh,9014,576,134,103,2.0717
+Cotton,2004,Rabi,Madhya Pradesh,9151,659,181,122,1.2658
+Chickpea,2005,Rabi,Madhya Pradesh,9288,742,228,141,1.0529
+Groundnut,2006,Rabi,Madhya Pradesh,9425,825,275,160,1.3369
+Sugarcane,2007,Summer,Madhya Pradesh,9562,908,322,179,69.9592
+Potato,2008,Summer,Rajasthan,9699,991,369,18,24.7865
+Soybean,2009,Summer,Rajasthan,9836,1074,416,37,1.5125
+Millet,2010,Whole Year,Rajasthan,9973,1157,43,56,0.865
+Rice,2011,Whole Year,Rajasthan,310,1240,90,75,2.0903
+Wheat,2012,Whole Year,Rajasthan,447,1323,137,94,2.0782
+Maize,2013,Kharif,Rajasthan,584,1406,184,113,3.1317
+Cotton,2014,Kharif,Rajasthan,721,1489,231,132,1.8871
+Chickpea,2015,Kharif,Uttar Pradesh,858,1572,278,151,1.4454
+Groundnut,2016,Rabi,Uttar Pradesh,995,1655,325,170,1.8146
+Sugarcane,2017,Rabi,Uttar Pradesh,1132,1738,372,9,93.9648
+Potato,2018,Rabi,Uttar Pradesh,1269,371,419,28,20.4728
+Soybean,2019,Summer,Uttar Pradesh,1406,454,46,47,0.776
+Millet,2020,Summer,Uttar Pradesh,1543,537,93,66,0.744
+Rice,2001,Summer,Uttar Pradesh,1680,620,140,85,1.8042
+Wheat,2002,Whole Year,Bihar,1817,703,187,104,1.6789
+Maize,2003,Whole Year,Bihar,1954,786,234,123,2.5405
+Cotton,2004,Whole Year,Bihar,2091,869,281,142,1.537
+Chickpea,2005,Kharif,Bihar,2228,952,328,161,1.2673
+Groundnut,2006,Kharif,Bihar,2365,1035,375,180,1.596
+Sugarcane,2007,Kharif,Bihar,2502,1118,422,19,82.9043
+Potato,2008,Rabi,Bihar,2639,1201,49,38,19.325
+Soybean,2009,Rabi,Gujarat,2776,1284,96,57,1.1199
+Millet,2010,Rabi,Gujarat,2913,1367,143,76,1.0577
+Rice,2011,Summer,Gujarat,3050,1450,190,95,2.5296
+Wheat,2012,Summer,Gujarat,3187,1533,237,114,2.4916
+Maize,2013,Summer,Gujarat,3324,1616,284,133,3.7232
+Cotton,2014,Whole Year,Gujarat,3461,1699,331,152,2.2265
+Chickpea,2015,Whole Year,Gujarat,3598,1782,378,171,1.7988
+Groundnut,2016,Whole Year,Maharashtra,3735,415,425,10,1.234
+Sugarcane,2017,Kharif,Maharashtra,3872,498,52,29,39.9665
+Potato,2018,Kharif,Maharashtra,4009,581,99,48,15.5671
+Soybean,2019,Kharif,Maharashtra,4146,664,146,67,0.971
+Millet,2020,Rabi,Maharashtra,4283,747,193,86,0.9201
+Rice,2001,Rabi,Maharashtra,4420,830,240,105,2.2076
+Wheat,2002,Rabi,Maharashtra,4557,913,287,124,2.1814
+Maize,2003,Summer,Punjab,4694,996,334,143,3.0499
+Cotton,2004,Summer,Punjab,4831,1079,381,162,1.8307
+Chickpea,2005,Summer,Punjab,4968,1162,428,181,1.4985
+Groundnut,2006,Whole Year,Punjab,5105,1245,55,20,1.1621
+Sugarcane,2007,Whole Year,Punjab,5242,1328,102,39,61.4938
+Potato,2008,Whole Year,Punjab,5379,1411,149,58,23.5874
+Soybean,2009,Kharif,Punjab,5516,1494,196,77,1.4506
+Millet,2010,Kharif,Karnataka,5653,1577,243,96,1.2654
+Rice,2011,Kharif,Karnataka,5790,1660,290,115,3.0012
+Wheat,2012,Rabi,Karnataka,5927,1743,337,134,2.9341
+Maize,2013,Rabi,Karnataka,6064,376,384,153,2.525
+Cotton,2014,Rabi,Karnataka,6201,459,431,172,1.526
+Chickpea,2015,Summer,Karnataka,6338,542,58,11,0.7806
+Groundnut,2016,Summer,Karnataka,6475,625,105,30,1.0069
+Sugarcane,2017,Summer,Madhya Pradesh,6612,708,152,49,49.8458
+Potato,2018,Whole Year,Madhya Pradesh,6749,791,199,68,19.1919
+Soybean,2019,Whole Year,Madhya Pradesh,6886,874,246,87,1.1848
+Millet,2020,Whole Year,Madhya Pradesh,7023,957,293,106,1.1122
+Rice,2001,Kharif,Madhya Pradesh,7160,1040,340,125,2.6457
+Wheat,2002,Kharif,Madhya Pradesh,7297,1123,387,144,2.5941
+Maize,2003,Kharif,Madhya Pradesh,7434,1206,434,163,3.861
+Cotton,2004,Rabi,Rajasthan,7571,1289,61,182,1.3347
+Chickpea,2005,Rabi,Rajasthan,7708,1372,108,21,1.1127
+Groundnut,2006,Rabi,Rajasthan,7845,1455,155,40,1.4149
+Sugarcane,2007,Summer,Rajasthan,7982,1538,202,59,74.1239
+Potato,2008,Summer,Rajasthan,8119,1621,249,78,28.1773
+Soybean,2009,Summer,Rajasthan,8256,1704,296,97,1.7189
+Millet,2010,Whole Year,Rajasthan,8393,1787,343,116,1.5784
+Rice,2011,Whole Year,Uttar Pradesh,8530,420,390,135,2.0503
+Wheat,2012,Whole Year,Uttar Pradesh,8667,503,437,154,2.0249
+Maize,2013,Kharif,Uttar Pradesh,8804,586,64,173,1.8904
+Cotton,2014,Kharif,Uttar Pradesh,8941,669,111,12,1.1616
+Chickpea,2015,Kharif,Uttar Pradesh,9078,752,158,31,0.9711
+Groundnut,2016,Rabi,Uttar Pradesh,9215,835,205,50,1.2385
+Sugarcane,2017,Rabi,Uttar Pradesh,9352,918,252,69,65.071
+Potato,2018,Rabi,Bihar,9489,1001,299,88,23.1378
+Soybean,2019,Summer,Bihar,9626,1084,346,107,1.4165
+Millet,2020,Summer,Bihar,9763,1167,393,126,1.3196
+Rice,2001,Summer,Bihar,9900,1250,440,145,3.1173
+Wheat,2002,Whole Year,Bihar,237,1333,67,164,1.8949
+Maize,2003,Whole Year,Bihar,374,1416,114,183,2.8719
+Cotton,2004,Whole Year,Bihar,511,1499,161,22,1.7392
+Chickpea,2005,Kharif,Gujarat,648,1582,208,41,1.3382
+Groundnut,2006,Kharif,Gujarat,785,1665,255,60,1.6867
+Sugarcane,2007,Kharif,Gujarat,922,1748,302,79,87.6603
+Potato,2008,Rabi,Gujarat,1059,381,349,98,19.2023
+Soybean,2009,Rabi,Gujarat,1196,464,396,117,1.1834
+Millet,2010,Rabi,Gujarat,1333,547,443,136,1.1093
+Rice,2011,Summer,Gujarat,1470,630,70,155,1.6475
+Wheat,2012,Summer,Maharashtra,1607,713,117,174,1.5416
+Maize,2013,Summer,Maharashtra,1744,796,164,13,2.3443
+Cotton,2014,Whole Year,Maharashtra,1881,879,211,32,1.4246
+Chickpea,2015,Whole Year,Maharashtra,2018,962,258,51,1.1793
+Groundnut,2016,Whole Year,Maharashtra,2155,1045,305,70,1.4904
+Sugarcane,2017,Kharif,Maharashtra,2292,1128,352,89,77.67
+Potato,2018,Kharif,Maharashtra,2429,1211,399,108,29.39
+Soybean,2019,Kharif,Punjab,2566,1294,446,127,1.6655
+Millet,2020,Rabi,Punjab,2703,1377,73,146,0.9652
+Rice,2001,Rabi,Punjab,2840,1460,120,165,2.3212
+Wheat,2002,Rabi,Punjab,2977,1543,167,184,2.2977
+Maize,2003,Summer,Punjab,3114,1626,214,23,3.4487
+Cotton,2004,Summer,Punjab,3251,1709,261,42,2.0705
+Chickpea,2005,Summer,Punjab,3388,1792,308,61,1.6738
+Groundnut,2006,Whole Year,Karnataka,3525,425,355,80,1.1578
+Sugarcane,2007,Whole Year,Karnataka,3662,508,402,99,60.762
+Potato,2008,Whole Year,Karnataka,3799,591,449,118,23.1455
+Soybean,2009,Kharif,Karnataka,3936,674,76,137,0.8873
+Millet,2010,Kharif,Karnataka,4073,757,123,156,0.8454
+Rice,2011,Kharif,Karnataka,4210,840,170,175,2.0383
+Wheat,2012,Rabi,Karnataka,4347,923,217,14,2.0228
+Maize,2013,Rabi,Madhya Pradesh,4484,1006,264,33,2.8393
+Cotton,2014,Rabi,Madhya Pradesh,4621,1089,311,52,1.7102
+Chickpea,2015,Summer,Madhya Pradesh,4758,1172,358,71,1.4044
+Groundnut,2016,Summer,Madhya Pradesh,4895,1255,405,90,1.762
+Sugarcane,2017,Summer,Madhya Pradesh,5032,1338,452,109,91.2044
+Potato,2018,Whole Year,Madhya Pradesh,5169,1421,79,128,21.5386
+Soybean,2019,Whole Year,Madhya Pradesh,5306,1504,126,147,1.3319
+Millet,2020,Whole Year,Rajasthan,5443,1587,173,166,1.1675
+Rice,2001,Kharif,Rajasthan,5580,1670,220,5,2.7813
+Wheat,2002,Kharif,Rajasthan,5717,1753,267,24,2.7274
+Maize,2003,Kharif,Rajasthan,5854,386,314,43,2.3624
+Cotton,2004,Rabi,Rajasthan,5991,469,361,62,1.4322
+Chickpea,2005,Rabi,Rajasthan,6128,552,408,81,1.1832
+Groundnut,2006,Rabi,Rajasthan,6265,635,455,100,1.4929
+Sugarcane,2007,Summer,Uttar Pradesh,6402,718,82,119,45.5784
+Potato,2008,Summer,Uttar Pradesh,6539,801,129,138,17.6441
+Soybean,2009,Summer,Uttar Pradesh,6676,884,176,157,1.0944
+Millet,2010,Whole Year,Uttar Pradesh,6813,967,223,176,1.0318
+Rice,2011,Whole Year,Uttar Pradesh,6950,1050,270,15,2.464
+Wheat,2012,Whole Year,Uttar Pradesh,7087,1133,317,34,2.4243
+Maize,2013,Kharif,Uttar Pradesh,7224,1216,364,53,3.6197
+Cotton,2014,Kharif,Bihar,7361,1299,411,72,2.0176
+Chickpea,2015,Kharif,Bihar,7498,1382,458,91,1.6458
+Groundnut,2016,Rabi,Bihar,7635,1465,85,110,1.2929
+Sugarcane,2017,Rabi,Bihar,7772,1548,132,129,68.1021
+Potato,2018,Rabi,Bihar,7909,1631,179,148,26.0132
+Soybean,2019,Summer,Bihar,8046,1714,226,167,1.5937
+Millet,2020,Summer,Bihar,8183,1797,273,6,1.4649
+Rice,2001,Summer,Gujarat,8320,430,320,25,1.9189
+Wheat,2002,Whole Year,Gujarat,8457,513,367,44,1.9009
+Maize,2003,Whole Year,Gujarat,8594,596,414,63,2.8567
+Cotton,2004,Whole Year,Gujarat,8731,679,41,82,1.0564
+Chickpea,2005,Kharif,Gujarat,8868,762,88,101,0.8886
+Groundnut,2006,Kharif,Gujarat,9005,845,135,120,1.1393
+Sugarcane,2007,Kharif,Gujarat,9142,928,182,139,60.1422
+Potato,2008,Rabi,Maharashtra,9279,1011,229,158,21.4759
+Soybean,2009,Rabi,Maharashtra,9416,1094,276,177,1.3197
+Millet,2010,Rabi,Maharashtra,9553,1177,323,16,1.2337
+Rice,2011,Summer,Maharashtra,9690,1260,370,35,2.9235
+Wheat,2012,Summer,Maharashtra,9827,1343,417,54,2.8561
+Maize,2013,Summer,Maharashtra,9964,1426,44,73,2.6102
+Cotton,2014,Whole Year,Maharashtra,301,1509,91,92,1.5904
+Chickpea,2015,Whole Year,Punjab,438,1592,138,111,1.2302
+Groundnut,2016,Whole Year,Punjab,575,1675,185,130,1.558
+Sugarcane,2017,Kharif,Punjab,712,1758,232,149,81.1244
+Potato,2018,Kharif,Punjab,849,391,279,168,17.9182
+Soybean,2019,Kharif,Punjab,986,474,326,7,1.1079
+Millet,2020,Rabi,Punjab,1123,557,373,26,1.0417
+Rice,2001,Rabi,Punjab,1260,640,420,45,2.4823
+Wheat,2002,Rabi,Karnataka,1397,723,47,64,1.4031
+Maize,2003,Summer,Karnataka,1534,806,94,83,2.1465
+Cotton,2004,Summer,Karnataka,1671,889,141,102,1.3113
+Chickpea,2005,Summer,Karnataka,1808,972,188,121,1.0905
+Groundnut,2006,Whole Year,Karnataka,1945,1055,235,140,1.384
+Sugarcane,2007,Whole Year,Karnataka,2082,1138,282,159,72.3955
+Potato,2008,Whole Year,Karnataka,2219,1221,329,178,27.4872
+Soybean,2009,Kharif,Madhya Pradesh,2356,1304,376,17,1.5625
+Millet,2010,Kharif,Madhya Pradesh,2493,1387,423,36,1.4505
+Rice,2011,Kharif,Madhya Pradesh,2630,1470,50,55,2.1113
+Wheat,2012,Rabi,Madhya Pradesh,2767,1553,97,74,2.1025
+Maize,2013,Rabi,Madhya Pradesh,2904,1636,144,93,3.1724
+Cotton,2014,Rabi,Madhya Pradesh,3041,1719,191,112,1.9136
+Chickpea,2015,Summer,Madhya Pradesh,3178,352,238,131,0.9073
+Groundnut,2016,Summer,Rajasthan,3315,435,285,150,1.0808
+Sugarcane,2017,Summer,Rajasthan,3452,518,332,169,56.9061
+Potato,2018,Whole Year,Rajasthan,3589,601,379,8,21.7416
+Soybean,2019,Whole Year,Rajasthan,3726,684,426,27,1.3329
+Millet,2020,Whole Year,Rajasthan,3863,767,53,46,0.77
+Rice,2001,Kharif,Rajasthan,4000,850,100,65,1.8675
+Wheat,2002,Kharif,Rajasthan,4137,933,147,84,1.8629
+Maize,2003,Kharif,Uttar Pradesh,4274,1016,194,103,2.6269
+Cotton,2004,Rabi,Uttar Pradesh,4411,1099,241,122,1.5889
+Chickpea,2005,Rabi,Uttar Pradesh,4548,1182,288,141,1.3095
+Groundnut,2006,Rabi,Uttar Pradesh,4685,1265,335,160,1.6485
+Sugarcane,2007,Summer,Uttar Pradesh,4822,1348,382,179,85.5918
+Potato,2008,Summer,Uttar Pradesh,4959,1431,429,18,32.2767
+Soybean,2009,Summer,Uttar Pradesh,5096,1514,56,37,1.2125
+Millet,2010,Whole Year,Bihar,5233,1597,103,56,1.0691
+Rice,2011,Whole Year,Bihar,5370,1680,150,75,2.56
+Wheat,2012,Whole Year,Bihar,5507,1763,197,94,2.5145
+Maize,2013,Kharif,Bihar,5644,396,244,113,2.1981
+Cotton,2014,Kharif,Bihar,5781,479,291,132,1.3374
+Chickpea,2015,Kharif,Bihar,5918,562,338,151,1.1085
+Groundnut,2016,Rabi,Bihar,6055,645,385,170,1.4028
+Sugarcane,2017,Rabi,Gujarat,6192,728,432,9,68.2737
+Potato,2018,Rabi,Gujarat,6329,811,59,28,16.0828
+Soybean,2019,Summer,Gujarat,6466,894,106,47,1.0034
+Millet,2020,Summer,Gujarat,6603,977,153,66,0.9508
+Rice,2001,Summer,Gujarat,6740,1060,200,85,2.2808
+Wheat,2002,Whole Year,Gujarat,6877,1143,247,104,2.2532
+Maize,2003,Whole Year,Gujarat,7014,1226,294,123,3.3766
+Cotton,2004,Whole Year,Maharashtra,7151,1309,341,142,1.8884
+Chickpea,2005,Kharif,Maharashtra,7288,1392,388,161,1.5451
+Groundnut,2006,Kharif,Maharashtra,7425,1475,435,180,1.932
+Sugarcane,2007,Kharif,Maharashtra,7562,1558,62,19,62.0409
+Potato,2008,Rabi,Maharashtra,7699,1641,109,38,23.8354
+Soybean,2009,Rabi,Maharashtra,7836,1724,156,57,1.4678
+Millet,2010,Rabi,Maharashtra,7973,357,203,76,0.7936
+Rice,2011,Summer,Punjab,8110,440,250,95,1.7862
+Wheat,2012,Summer,Punjab,8247,523,297,114,1.7757
+Maize,2013,Summer,Punjab,8384,606,344,133,2.6771
+Cotton,2014,Whole Year,Punjab,8521,689,391,152,1.6144
+Chickpea,2015,Whole Year,Punjab,8658,772,438,171,1.3273
+Groundnut,2016,Whole Year,Punjab,8795,855,65,10,1.0392
+Sugarcane,2017,Kharif,Punjab,8932,938,112,29,55.1728
+Potato,2018,Kharif,Karnataka,9069,1021,159,48,19.8006
+Soybean,2019,Kharif,Karnataka,9206,1104,206,67,1.2222
+Millet,2020,Rabi,Karnataka,9343,1187,253,86,1.1471
+Rice,2001,Rabi,Karnataka,9480,1270,300,105,2.7282
+Wheat,2002,Rabi,Karnataka,9617,1353,347,124,2.6741
+Maize,2003,Summer,Karnataka,9754,1436,394,143,3.9787
+Cotton,2004,Summer,Karnataka,9891,1519,441,162,2.37
+Chickpea,2005,Summer,Madhya Pradesh,228,1602,68,181,1.1216
+Groundnut,2006,Whole Year,Madhya Pradesh,365,1685,115,20,1.4285
+Sugarcane,2007,Whole Year,Madhya Pradesh,502,1768,162,39,74.5366
+Potato,2008,Whole Year,Madhya Pradesh,639,401,209,58,16.6204
+Soybean,2009,Kharif,Madhya Pradesh,776,484,256,77,1.0317
+Millet,2010,Kharif,Madhya Pradesh,913,567,303,96,0.9735
+Rice,2011,Kharif,Madhya Pradesh,1050,650,350,115,2.327
+Wheat,2012,Rabi,Rajasthan,1187,733,397,134,2.1376
+Maize,2013,Rabi,Rajasthan,1324,816,444,153,3.1972
+Cotton,2014,Rabi,Rajasthan,1461,899,71,172,1.1969
+Chickpea,2015,Summer,Rajasthan,1598,982,118,11,1.001
+Groundnut,2016,Summer,Rajasthan,1735,1065,165,30,1.2768
+Sugarcane,2017,Summer,Rajasthan,1872,1148,212,49,67.0807
+Potato,2018,Whole Year,Rajasthan,2009,1231,259,68,25.5704
+Soybean,2019,Whole Year,Uttar Pradesh,2146,1314,306,87,1.4587
+Millet,2020,Whole Year,Uttar Pradesh,2283,1397,353,106,1.3586
+Rice,2001,Kharif,Uttar Pradesh,2420,1480,400,125,3.2084
+Wheat,2002,Kharif,Uttar Pradesh,2557,1563,447,144,3.1245
+Maize,2003,Kharif,Uttar Pradesh,2694,1646,74,163,2.8943
+Cotton,2004,Rabi,Uttar Pradesh,2831,1729,121,182,1.7556
+Chickpea,2005,Rabi,Uttar Pradesh,2968,362,168,21,0.8384
+Groundnut,2006,Rabi,Bihar,3105,445,215,40,1.0029
+Sugarcane,2007,Summer,Bihar,3242,528,262,59,53.0115
+Potato,2008,Summer,Bihar,3379,611,309,78,20.3242
+Soybean,2009,Summer,Bihar,3516,694,356,97,1.25
+Millet,2010,Whole Year,Bihar,3653,777,403,116,1.1695
+Rice,2011,Whole Year,Bihar,3790,860,450,135,2.774
+Wheat,2012,Whole Year,Bihar,3927,943,77,154,1.7017
+Maize,2013,Kharif,Gujarat,4064,1026,124,173,2.4128
+Cotton,2014,Kharif,Gujarat,4201,1109,171,12,1.4665
+Chickpea,2015,Kharif,Gujarat,4338,1192,218,31,1.214
+Groundnut,2016,Rabi,Gujarat,4475,1275,265,50,1.5342
+Sugarcane,2017,Rabi,Gujarat,4612,1358,312,69,79.9394
+Potato,2018,Rabi,Gujarat,4749,1441,359,88,30.2419
+Soybean,2019,Summer,Gujarat,4886,1524,406,107,1.8369
+Millet,2020,Summer,Maharashtra,5023,1607,453,126,1.5844
+Rice,2001,Summer,Maharashtra,5160,1690,80,145,2.3373
+Wheat,2002,Whole Year,Maharashtra,5297,1773,127,164,2.3017
+Maize,2003,Whole Year,Maharashtra,5434,406,174,183,2.0321
+Cotton,2004,Whole Year,Maharashtra,5571,489,221,22,1.2416
+Chickpea,2005,Kharif,Maharashtra,5708,572,268,41,1.033
+Groundnut,2006,Kharif,Maharashtra,5845,655,315,60,1.3118
+Sugarcane,2007,Kharif,Punjab,5982,738,362,79,64.0446
+Potato,2008,Rabi,Punjab,6119,821,409,98,24.3522
+Soybean,2009,Rabi,Punjab,6256,904,456,117,1.4864
+Millet,2010,Rabi,Punjab,6393,987,83,136,0.8691
+Rice,2011,Summer,Punjab,6530,1070,130,155,2.0963
+Wheat,2012,Summer,Punjab,6667,1153,177,174,2.0809
+Maize,2013,Summer,Punjab,6804,1236,224,13,3.1318
+Cotton,2014,Whole Year,Karnataka,6941,1319,271,32,1.7582
+Chickpea,2015,Whole Year,Karnataka,7078,1402,318,51,1.4436
+Groundnut,2016,Whole Year,Karnataka,7215,1485,365,70,1.8109
+Sugarcane,2017,Kharif,Karnataka,7352,1568,412,89,93.7135
+Potato,2018,Kharif,Karnataka,7489,1651,459,108,35.2317
+Soybean,2019,Kharif,Karnataka,7626,1734,86,127,1.3411
+Millet,2020,Rabi,Karnataka,7763,367,133,146,0.7306
+Rice,2001,Rabi,Madhya Pradesh,7900,450,180,165,1.6521
+Wheat,2002,Rabi,Madhya Pradesh,8037,533,227,184,1.6493
+Maize,2003,Summer,Madhya Pradesh,8174,616,274,23,2.4959
+Cotton,2004,Summer,Madhya Pradesh,8311,699,321,42,1.5103
+Chickpea,2005,Summer,Madhya Pradesh,8448,782,368,61,1.2455
+Groundnut,2006,Whole Year,Madhya Pradesh,8585,865,415,80,1.5689
+Sugarcane,2007,Whole Year,Madhya Pradesh,8722,948,42,99,50.1628
+Potato,2008,Whole Year,Rajasthan,8859,1031,89,118,18.1121
+Soybean,2009,Kharif,Rajasthan,8996,1114,136,137,1.124
+Millet,2010,Kharif,Rajasthan,9133,1197,183,156,1.06
+Rice,2011,Kharif,Rajasthan,9270,1280,230,175,2.5316
+Wheat,2012,Rabi,Rajasthan,9407,1363,277,14,2.4909
+Maize,2013,Rabi,Rajasthan,9544,1446,324,33,3.7188
+Cotton,2014,Rabi,Rajasthan,9681,1529,371,52,2.2221
+Chickpea,2015,Summer,Uttar Pradesh,9818,1612,418,71,1.6892
+Groundnut,2016,Summer,Uttar Pradesh,9955,1695,45,90,1.2982
+Sugarcane,2017,Summer,Uttar Pradesh,292,1778,92,109,67.9488
+Potato,2018,Whole Year,Uttar Pradesh,429,411,139,128,15.3089
+Soybean,2019,Whole Year,Uttar Pradesh,566,494,186,147,0.9547
+Millet,2020,Whole Year,Uttar Pradesh,703,577,233,166,0.9046
+Rice,2001,Kharif,Uttar Pradesh,840,660,280,5,2.1703
+Wheat,2002,Kharif,Bihar,977,743,327,24,2.0004
+Maize,2003,Kharif,Bihar,1114,826,374,43,3.0011
+Cotton,2004,Rabi,Bihar,1251,909,421,62,1.8017
+Chickpea,2005,Rabi,Bihar,1388,992,48,81,0.9108
+Groundnut,2006,Rabi,Bihar,1525,1075,95,100,1.1687
+Sugarcane,2007,Summer,Bihar,1662,1158,142,119,61.7257
+Potato,2008,Summer,Bihar,1799,1241,189,138,23.6395
+Soybean,2009,Summer,Gujarat,1936,1324,236,157,1.3542
+Millet,2010,Whole Year,Gujarat,2073,1407,283,176,1.266
+Rice,2011,Whole Year,Gujarat,2210,1490,330,15,3
+Wheat,2012,Whole Year,Gujarat,2347,1573,377,34,2.9306
+Maize,2013,Kharif,Gujarat,2484,1656,424,53,4.3465
+Cotton,2014,Kharif,Gujarat,2621,1739,51,72,1.5967
+Chickpea,2015,Kharif,Gujarat,2758,372,98,91,0.7687
+Groundnut,2016,Rabi,Maharashtra,2895,455,145,110,0.9243
+Sugarcane,2017,Rabi,Maharashtra,3032,538,192,129,49.0783
+Potato,2018,Rabi,Maharashtra,3169,621,239,148,18.8932
+Soybean,2019,Summer,Maharashtra,3306,704,286,167,1.1662
+Millet,2020,Summer,Maharashtra,3443,787,333,6,1.0948
+Rice,2001,Summer,Maharashtra,3580,870,380,25,2.6046
+Wheat,2002,Whole Year,Maharashtra,3717,953,427,44,2.5541
+Maize,2003,Whole Year,Punjab,3854,1036,54,63,2.1971
+Cotton,2004,Whole Year,Punjab,3991,1119,101,82,1.3433
+Chickpea,2005,Kharif,Punjab,4128,1202,148,101,1.1177
+Groundnut,2006,Kharif,Punjab,4265,1285,195,120,1.4191
+Sugarcane,2007,Kharif,Punjab,4402,1368,242,139,74.2472
+Potato,2008,Rabi,Punjab,4539,1451,289,158,28.1931
+Soybean,2009,Rabi,Punjab,4676,1534,336,177,1.7183
+Millet,2010,Rabi,Karnataka,4813,1617,383,16,1.4866
+Rice,2011,Summer,Karnataka,4950,1700,430,35,3.5001
+Wheat,2012,Summer,Karnataka,5087,1783,57,54,2.0888
+Maize,2013,Summer,Karnataka,5224,416,104,73,1.8643
+Cotton,2014,Whole Year,Karnataka,5361,499,151,92,1.1449
+Chickpea,2015,Whole Year,Karnataka,5498,582,198,111,0.9568
+Groundnut,2016,Whole Year,Karnataka,5635,665,245,130,1.22
+Sugarcane,2017,Kharif,Madhya Pradesh,5772,748,292,149,59.7772
+Potato,2018,Kharif,Madhya Pradesh,5909,831,339,168,22.8044
+Soybean,2019,Kharif,Madhya Pradesh,6046,914,386,7,1.3961
+Millet,2020,Rabi,Madhya Pradesh,6183,997,433,26,1.3007
+Rice,2001,Rabi,Madhya Pradesh,6320,1080,60,45,1.9102
+Wheat,2002,Rabi,Madhya Pradesh,6457,1163,107,64,1.9072
+Maize,2003,Summer,Madhya Pradesh,6594,1246,154,83,2.8851
+Cotton,2004,Summer,Rajasthan,6731,1329,201,102,1.6271
+Chickpea,2005,Summer,Rajasthan,6868,1412,248,121,1.3414
+Groundnut,2006,Whole Year,Rajasthan,7005,1495,295,140,1.6889
+Sugarcane,2007,Whole Year,Rajasthan,7142,1578,342,159,87.6917
+Potato,2008,Whole Year,Rajasthan,7279,1661,389,178,33.0676
+Soybean,2009,Kharif,Rajasthan,7416,1744,436,17,2.0025
+Millet,2010,Kharif,Rajasthan,7553,377,63,36,0.6669
+Rice,2011,Kharif,Uttar Pradesh,7690,460,110,55,1.5166
+Wheat,2012,Rabi,Uttar Pradesh,7827,543,157,74,1.5216
+Maize,2013,Rabi,Uttar Pradesh,7964,626,204,93,2.3129
+Cotton,2014,Rabi,Uttar Pradesh,8101,709,251,112,1.4051
+Chickpea,2015,Summer,Uttar Pradesh,8238,792,298,131,1.1629
+Groundnut,2016,Summer,Uttar Pradesh,8375,875,345,150,1.4696
+Sugarcane,2017,Summer,Uttar Pradesh,8512,958,392,169,76.5858
+Potato,2018,Whole Year,Bihar,8649,1041,439,8,27.0302
+Soybean,2019,Whole Year,Bihar,8786,1124,66,27,1.025
+Millet,2020,Whole Year,Bihar,8923,1207,113,46,0.9721
+Rice,2001,Kharif,Bihar,9060,1290,160,65,2.3336
+Wheat,2002,Kharif,Bihar,9197,1373,207,84,2.3063
+Maize,2003,Kharif,Bihar,9334,1456,254,103,3.4572
+Cotton,2004,Rabi,Bihar,9471,1539,301,122,2.0733
+Chickpea,2005,Rabi,Gujarat,9608,1622,348,141,1.5812
+Groundnut,2006,Rabi,Gujarat,9745,1705,395,160,1.9773
+Sugarcane,2007,Summer,Gujarat,9882,1788,442,179,100.8879
+Potato,2008,Summer,Gujarat,219,421,69,18,13.9837
+Soybean,2009,Summer,Gujarat,356,504,116,37,0.8769
+Millet,2010,Whole Year,Gujarat,493,587,163,56,0.835
+Rice,2011,Whole Year,Gujarat,630,670,210,75,2.0121
+Wheat,2012,Whole Year,Maharashtra,767,753,257,94,1.8619
+Maize,2013,Kharif,Maharashtra,904,836,304,113,2.8032
+Cotton,2014,Kharif,Maharashtra,1041,919,351,132,1.6883
+Chickpea,2015,Kharif,Maharashtra,1178,1002,398,151,1.3863
+Groundnut,2016,Rabi,Maharashtra,1315,1085,445,170,1.7393
+Sugarcane,2017,Rabi,Maharashtra,1452,1168,72,9,56.3305
+Potato,2018,Rabi,Maharashtra,1589,1251,119,28,21.6944
+Soybean,2019,Summer,Punjab,1726,1334,166,47,1.249
+Millet,2020,Summer,Punjab,1863,1417,213,66,1.1728
