@@ -1,0 +1,13 @@
+model,crop,season,state,temperature,humidity,rainfall,soil_moisture,nitrogen,phosphorus,potassium,ph,area,fertilizer,pesticide,pest, pest_count,etl
+crop,Rice,Kharif,Gujarat,28,72,620,,,,6.5,,,,,,
+crop,Wheat,Rabi,Punjab,21,65,480,,,,6.8,,,,,,
+crop,Cotton,Kharif,Maharashtra,30,68,710,,,,7.1,,,,,,
+fertilizer,Rice,Kharif,Gujarat,28,72,620,35,90,40,40,,,,,,
+fertilizer,Wheat,Rabi,Punjab,21,65,480,28,80,45,35,,,,,,
+fertilizer,Cotton,Kharif,Maharashtra,30,68,710,42,70,35,50,,,,,,
+yield,Rice,Kharif,Gujarat,28,72,620,,90,40,40,6.5,1000,150,20,,,
+yield,Wheat,Rabi,Punjab,21,65,480,,80,45,35,6.8,1200,140,18,,,
+yield,Cotton,Kharif,Maharashtra,30,68,710,,70,35,50,7.1,900,160,25,,,
+pest,Cotton,Kharif,Maharashtra,30,68,710,42,70,35,50,7.1,900,160,25,Whitefly,6,5
+pest,Cotton,Kharif,Gujarat,31,74,760,48,75,38,45,7.0,950,155,28,Jassid,2,1
+pest,Rice,Kharif,Gujarat,29,80,820,55,85,42,38,6.7,1100,145,18,Stem_Borer,4,5
