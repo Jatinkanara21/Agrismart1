@@ -126,7 +126,7 @@ jobs:
           model_path = Path("models/disease_model.joblib")
           assert model_path.exists(), "Disease model was not created"
           model = joblib.load(model_path)
-          prediction = model.predict([model._validate_X_predict([[0.2] * (64*64*3)], check_input=True)[0]])[0]
+          prediction = model.predict([[0.2] * (64*64*3)])[0]
           assert prediction in {"healthy", "leaf_spot", "rust", "blight"}
           print(f"disease_prediction={prediction}")
           PY
