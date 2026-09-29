@@ -58,3 +58,9 @@ jobs:
 
       - name: Validate API imports
         run: python -c "from app import app; print(app.title)"
+
+      - name: Build production Docker image
+        run: docker build --tag agrismart-ml:ci .
+
+      - name: Verify Docker image metadata
+        run: docker image inspect agrismart-ml:ci >/dev/null
