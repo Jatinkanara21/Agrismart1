@@ -38,7 +38,16 @@ jobs:
         run: flutter test
 
       - name: Build Flutter Web
-        run: flutter build web --release --base-href "/Agrismart1/"
+        env:
+          AGRISMART_ML_BASE_URL: ${{ secrets.AGRISMART_ML_BASE_URL }}
+        run: |
+          if [ -z "$AGRISMART_ML_BASE_URL" ]; then
+            echo "ERROR: AGRISMART_ML_BASE_URL GitHub Actions secret is required."
+            exit 1
+          fi
+          flutter build web --release \
+            --base-href "/Agrismart1/" \
+            --dart-define=AGRISMART_ML_BASE_URL="$AGRISMART_ML_BASE_URL"
 
       - name: Add SPA fallback
         run: cp build/web/index.html build/web/404.html
