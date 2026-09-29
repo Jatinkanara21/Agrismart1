@@ -1,17 +1,17 @@
 from pathlib import Path
-import io
-import base64
+
 import joblib
 import numpy as np
 from PIL import Image, ImageDraw
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
+from sklearn.model_selection import train_test_split
 
 BASE = Path(__file__).resolve().parent
 MODEL = BASE / "models" / "disease_model.joblib"
 
 CLASSES = ["healthy", "leaf_spot", "rust", "blight"]
+
 
 def make_image(label: str, seed: int) -> np.ndarray:
     rng = np.random.default_rng(seed)
@@ -40,26 +40,37 @@ def make_image(label: str, seed: int) -> np.ndarray:
             x, y = int(rng.integers(8, 56)), int(rng.integers(8, 56))
             w, h = int(rng.integers(5, 12)), int(rng.integers(3, 9))
             draw.ellipse((x, y, x+w, y+h), fill=(75, 45, 25))
+
     return np.asarray(pil, dtype=np.float32).reshape(-1) / 255.0
 
-def train_disease_model(model_path: Path = MODEL):
+
+def train_disease_model(model_path: Path = MODEL) -> Path:
     X, y = [], []
     for class_id, label in enumerate(CLASSES):
         for seed in range(150):
             X.append(make_image(label, class_id * 1000 + seed))
             y.append(label)
+
     X, y = np.asarray(X), np.asarray(y)
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y
     )
-    model = RandomForestClassifier(n_estimators=200, random_state=42, n_jobs=-1)
+
+    model = RandomForestClassifier(
+        n_estimators=200,
+        random_state=42,
+        n_jobs=-1,
+    )
     model.fit(X_train, y_train)
+
     pred = model.predict(X_test)
     print(f"disease_accuracy={accuracy_score(y_test, pred):.4f}")
     print(classification_report(y_test, pred, zero_division=0))
+
     model_path.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, model_path)
     return model_path
+
 
 if __name__ == "__main__":
     train_disease_model()
