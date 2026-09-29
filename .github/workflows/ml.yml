@@ -42,6 +42,9 @@ jobs:
       - name: Train fertilizer model
         run: python train_fertilizer.py
 
+      - name: Train yield model
+        run: python train_yield.py
+
       - name: Verify trained models
         run: |
           python - <<'PY'
