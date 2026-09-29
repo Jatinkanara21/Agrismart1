@@ -10,6 +10,9 @@ import '../profile/profile_screen.dart';
 import '../weather/weather_screen.dart';
 import '../farm/farm_screen.dart';
 import '../notifications/notifications_screen.dart';
+import '../ai_tools/fertilizer_screen.dart';
+import '../ai_tools/yield_prediction_screen.dart';
+import '../ai_tools/pest_risk_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final VoidCallback onThemeToggle;
@@ -148,9 +151,9 @@ class _Dashboard extends StatelessWidget {
               childAspectRatio: 1.45,
               children: [
                 _AiToolCard(icon: Icons.spa_rounded, title: 'Crop Advisor', subtitle: 'Find a suitable crop', color: AppTheme.green, onTap: () => onTab(1)),
-                _AiToolCard(icon: Icons.science_rounded, title: 'Fertilizer', subtitle: 'Get nutrient guidance', color: const Color(0xFF7B5E35), onTap: () {}),
-                _AiToolCard(icon: Icons.insights_rounded, title: 'Yield Prediction', subtitle: 'Estimate crop yield', color: const Color(0xFF2D6A8A), onTap: () {}),
-                _AiToolCard(icon: Icons.bug_report_rounded, title: 'Pest Risk', subtitle: 'Check risk level', color: const Color(0xFFB66A1C), onTap: () {}),
+                _AiToolCard(icon: Icons.science_rounded, title: 'Fertilizer', subtitle: 'Get nutrient guidance', color: const Color(0xFF7B5E35), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FertilizerScreen()))),
+                _AiToolCard(icon: Icons.insights_rounded, title: 'Yield Prediction', subtitle: 'Estimate crop yield', color: const Color(0xFF2D6A8A), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const YieldPredictionScreen()))),
+                _AiToolCard(icon: Icons.bug_report_rounded, title: 'Pest Risk', subtitle: 'Check risk level', color: const Color(0xFFB66A1C), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const PestRiskScreen()))),
                 _AiToolCard(icon: Icons.document_scanner_rounded, title: 'Disease Scan', subtitle: 'Analyze a leaf image', color: const Color(0xFF8A4D72), onTap: () => onTab(2)),
                 _AiToolCard(
                   icon: Icons.cloud_outlined,
