@@ -99,6 +99,17 @@ def fertilizer_recommendation(req: FertilizerRequest):
     }
 
 
+class PestRiskRequest(BaseModel):
+    crop: str
+    pest: str
+    temperature_c: float
+    humidity_pct: float = Field(..., ge=0, le=100)
+    rainfall_mm: float = Field(..., ge=0)
+    soil_moisture_pct: float = Field(..., ge=0, le=100)
+    pest_count: float = Field(..., ge=0)
+    etl: float = Field(..., gt=0)
+
+
 class YieldRequest(BaseModel):
     crop: str
     crop_year: int = Field(..., ge=1990, le=2100)
@@ -136,15 +147,22 @@ def yield_prediction(req: YieldRequest):
 
 
 @app.post("/api/v1/pest-risk")
-def pest_risk(payload: dict):
+def pest_risk(req: PestRiskRequest):
     model_path = MODELS / "pest_model.joblib"
     if not model_path.exists():
-        raise HTTPException(503, "Pest-risk model is not trained yet.")
+        from train_pest import train_pest_model
+        train_pest_model(model_path)
     model = joblib.load(model_path)
-    x = pd.DataFrame([payload])
+    x = pd.DataFrame([req.model_dump()])
     prediction = str(model.predict(x)[0])
     confidence = float(np.max(model.predict_proba(x)[0])) if hasattr(model, "predict_proba") else 0.0
-    return {"success": True, "risk": prediction, "confidence": round(confidence, 4)}
+    return {
+        "success": True,
+        "risk": prediction,
+        "confidence": round(confidence, 4),
+        "dataset_type": "synthetic_etl_derived",
+        "warning": "Development model only; replace with validated field data before agronomic use.",
+    }
 
 
 @app.get("/api/v1/models")
