@@ -39,7 +39,35 @@ jobs:
       - name: Train crop model
         run: python train_crop.py
 
-      - name: Verify trained model
+      - name: Train fertilizer model
+        run: python train_fertilizer.py
+
+      - name: Verify trained models
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import joblib
+
+          fertilizer_path = Path("models/fertilizer_model.joblib")
+          assert fertilizer_path.exists(), "Fertilizer model was not created"
+          fertilizer = joblib.load(fertilizer_path)
+          sample = [[20, 83, 26, "Clayey", "rice", 90, 49, 36]]
+          prediction = fertilizer.predict(
+              __import__("pandas").DataFrame(
+                  sample,
+                  columns=[
+                      "Temparature", "Humidity", "Moisture", "Soil_Type",
+                      "Crop_Type", "Nitrogen", "Potassium", "Phosphorous"
+                  ],
+              )
+          )[0]
+          assert isinstance(prediction, str) and prediction.strip()
+          print(f"fertilizer_prediction={prediction}")
+          print(f"fertilizer_classes={len(fertilizer.classes_)}")
+          assert len(fertilizer.classes_) >= 2
+          PY
+
+      - name: Verify crop model
         run: |
           python - <<'PY'
           from pathlib import Path
