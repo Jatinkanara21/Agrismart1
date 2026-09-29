@@ -2,6 +2,9 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
+import base64
+import io
+from PIL import Image
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
@@ -12,6 +15,10 @@ MODELS.mkdir(exist_ok=True)
 DATA.mkdir(exist_ok=True)
 
 app = FastAPI(title="AgriSmart ML Service", version="1.2.0")
+
+
+class DiseaseRequest(BaseModel):
+    image_base64: str
 
 
 class CropRequest(BaseModel):
@@ -148,6 +155,30 @@ def yield_prediction(req: YieldRequest):
     }
 
 
+@app.post("/api/v1/disease-detection")
+def disease_detection(req: DiseaseRequest):
+    model_path = MODELS / "disease_model.joblib"
+    if not model_path.exists():
+        from train_disease import train_disease_model
+        train_disease_model(model_path)
+    try:
+        raw = base64.b64decode(req.image_base64)
+        image = Image.open(io.BytesIO(raw)).convert("RGB").resize((64, 64))
+    except Exception as exc:
+        raise HTTPException(400, f"Invalid image_base64: {exc}") from exc
+    x = np.asarray(image, dtype=np.float32).reshape(1, -1) / 255.0
+    model = joblib.load(model_path)
+    prediction = str(model.predict(x)[0])
+    confidence = float(np.max(model.predict_proba(x)[0]))
+    return {
+        "success": True,
+        "disease": prediction,
+        "confidence": round(confidence, 4),
+        "dataset_type": "synthetic_development_images",
+        "warning": "Development classifier only; replace with validated real plant images before agricultural use.",
+    }
+
+
 @app.post("/api/v1/pest-risk")
 def pest_risk(req: PestRiskRequest):
     model_path = MODELS / "pest_model.joblib"
@@ -176,6 +207,6 @@ def models():
             "fertilizer": (MODELS / "fertilizer_model.joblib").exists(),
             "yield": (MODELS / "yield_model.joblib").exists(),
             "pest_risk": (MODELS / "pest_model.joblib").exists(),
-            "disease": (MODELS / "disease_model.tflite").exists(),
+            "disease": (MODELS / "disease_model.joblib").exists(),
         },
     }
